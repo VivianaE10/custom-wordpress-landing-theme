@@ -1,6 +1,188 @@
-/*
-Theme Name: si es mi tema
-Author: Tu nombre
-Description: Mi primer tema personalizado
-Version: 1.0
-*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin-top: 0 !important; /* para desactivar la margen que worpress genera*/
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* contenedor principal */
+.contenedor-principal {
+  width: 100%;
+
+  max-width: 1900px;
+
+  margin: 0 auto;
+
+  background: linear-gradient(to bottom, #232a33, #232a3300);
+
+  position: relative;
+}
+
+/* HEADER */
+
+.header {
+  position: absolute;
+
+  top: 1rem;
+  left: 0;
+
+  width: 100%;
+
+  padding: 2.5rem 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10;
+}
+
+/* LOGO */
+
+.logo {
+  color: white;
+
+  font-family: "Inter", sans-serif;
+  font-size: 3.1rem;
+  margin-left: 7rem;
+  font-weight: 700;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  gap: 2.5rem;
+  margin-right: 6rem;
+}
+
+.navbar a {
+  text-decoration: none;
+
+  color: white;
+
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+/* HEro */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  background-image: url("./assets/img/bg.png");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.overlay-hero {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to bottom, #232a33, #232a3300);
+
+  z-index: 1;
+}
+
+/* CONTENIDO HERO */
+
+.contenido-hero {
+  position: relative;
+  z-index: 5;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* TAKE OFF */
+
+.imagen-takeoff {
+  width: 52rem;
+  max-width: 90%;
+  margin-top: 10rem;
+}
+
+/* NUBE IZQUIERDA */
+
+.nube-izquierda {
+  position: absolute;
+
+  top: 13rem;
+  left: -1rem;
+
+  width: 63rem;
+
+  z-index: 2;
+
+  opacity: 0.9;
+
+  filter: blur(4px);
+}
+
+/* NUBE DERECHA */
+
+.nube-derecha {
+  position: absolute;
+
+  top: 4rem;
+  right: 1rem;
+
+  width: 50rem;
+
+  z-index: 2;
+
+  opacity: 0.8;
+}
+/* TEXTO */
+
+.descripcion-hero {
+  margin-top: 1.5rem;
+
+  max-width: 36rem;
+
+  color: white;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  line-height: 2rem;
+}
+
+/* BOTÓN */
+
+.boton1 {
+  margin-top: 2rem;
+
+  width: 10rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.boton1:hover {
+  transform: scale(1.05);
+}
