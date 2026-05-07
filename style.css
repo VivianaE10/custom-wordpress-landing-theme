@@ -9,33 +9,32 @@ html {
 html,
 body {
   overflow-x: hidden;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* contenedor principal */
 .contenedor-principal {
   width: 100%;
-
   max-width: 1900px;
-
   margin: 0 auto;
-
-  background: linear-gradient(to bottom, #232a33, #232a3300);
-
   position: relative;
+
+  background-image:
+    linear-gradient(to bottom, #232a33, #232a3300), url("./assets/img/bg.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 /* HEADER */
 
 .header {
   position: absolute;
-
   top: 1rem;
   left: 0;
-
   width: 100%;
-
   padding: 2.5rem 5rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +46,6 @@ body {
 
 .logo {
   color: white;
-
   font-family: "Inter", sans-serif;
   font-size: 3.1rem;
   margin-left: 7rem;
@@ -64,9 +62,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-
   color: white;
-
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
@@ -78,24 +74,9 @@ body {
 
 .hero {
   position: relative;
-
-  min-height: 100vh;
-
-  background-image: url("./assets/img/bg.png");
-
-  background-size: cover;
-  background-position: center;
-
   overflow: hidden;
-}
-
-.overlay-hero {
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(to bottom, #232a33, #232a3300);
-
-  z-index: 1;
+  padding-top: 12rem;
+  padding-bottom: 2rem;
 }
 
 /* CONTENIDO HERO */
@@ -103,15 +84,11 @@ body {
 .contenido-hero {
   position: relative;
   z-index: 5;
-
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
@@ -120,23 +97,18 @@ body {
 .imagen-takeoff {
   width: 52rem;
   max-width: 90%;
-  margin-top: 10rem;
+  margin-top: -15rem;
 }
 
 /* NUBE IZQUIERDA */
 
 .nube-izquierda {
   position: absolute;
-
   top: 13rem;
   left: -1rem;
-
   width: 63rem;
-
   z-index: 2;
-
   opacity: 0.9;
-
   filter: blur(4px);
 }
 
@@ -144,45 +116,105 @@ body {
 
 .nube-derecha {
   position: absolute;
-
   top: 4rem;
   right: 1rem;
-
   width: 50rem;
-
   z-index: 2;
-
   opacity: 0.8;
 }
-/* TEXTO */
 
-.descripcion-hero {
-  margin-top: 1.5rem;
+/* --------------------SECCIÓN B2B*/
+.seccion-b2b {
+  position: relative;
+  margin-top: -27rem;
+  padding-bottom: 8rem;
 
-  max-width: 36rem;
-
-  color: white;
-
-  font-family: "Plus Jakarta Sans", sans-serif;
-
-  font-size: 0.95rem;
-  font-weight: 500;
-
-  line-height: 2rem;
+  background: linear-gradient(to bottom, #232a3300 0%, #232a33 100%);
+  z-index: 5;
 }
 
-/* BOTÓN */
+.intro-b2b {
+  text-align: center;
+}
+/* CONTENIDO */
 
-.boton1 {
+.contenido-b2b {
+  width: 100%;
+  max-width: 85rem;
+  margin: 2rem auto 0 auto;
+  text-align: left;
+  padding-left: 8rem;
+}
+
+/* DESCRIPCIÓN */
+
+.descripcion-hero {
+  max-width: 42rem;
+  margin: 0 auto;
+  color: #ffffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin-top: 5rem;
+}
+
+/* BOTÓN SUPERIOR */
+
+.boton {
+  width: 17rem;
   margin-top: 2rem;
-
-  width: 10rem;
-
+  margin-bottom: 7rem;
   cursor: pointer;
-
   transition: 0.3s ease;
 }
 
-.boton1:hover {
+.boton:hover {
   transform: scale(1.05);
+}
+
+/* TITULO */
+
+.titulo-b2b {
+  color: #ffffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* TEXTOS */
+
+.texto-b2b {
+  max-width: 72rem;
+  color: #ffffffff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+  margin-bottom: 3rem;
+}
+
+/* BOTÓN INFERIOR */
+
+.boton-b2b {
+  width: 17rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.boton-b2b:hover {
+  transform: scale(1.05);
+}
+
+/* AIRPLANE*/
+
+.airplane-section {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.airplane-board {
+  width: 90rem;
+  max-width: 95%;
 }
