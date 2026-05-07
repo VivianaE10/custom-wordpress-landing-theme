@@ -123,16 +123,14 @@ body {
   opacity: 0.8;
 }
 
-/* --------------------SECCIÓN B2B*/
+/* --------------------SECCIÓN 2*/
 .seccion-b2b {
   position: relative;
   margin-top: -27rem;
-  padding-bottom: 8rem;
-
+  padding-bottom: 15rem;
   background: linear-gradient(to bottom, #232a3300 0%, #232a33 100%);
   z-index: 5;
 }
-
 .intro-b2b {
   text-align: center;
 }
@@ -218,3 +216,153 @@ body {
   width: 90rem;
   max-width: 95%;
 }
+
+/* ------------------------SECCIÓN 3*/
+.seccion-testimonio {
+  position: relative;
+  overflow: hidden;
+  margin-top: -8px;
+  padding: 170px 0 120px;
+  max-width: 1900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(35, 42, 51, 0) 0%,
+      rgba(35, 42, 51, 0.35) 8%,
+      rgba(35, 42, 51, 0.75) 18%,
+      #232a33 34%
+    ),
+    radial-gradient(
+      circle at 12% 20%,
+      rgba(73, 198, 243, 0.4) 0%,
+      rgba(73, 198, 243, 0) 46%
+    ),
+    radial-gradient(
+      circle at 88% 76%,
+      rgba(248, 148, 133, 0.32) 0%,
+      rgba(248, 148, 133, 0) 44%
+    ),
+    #232a33;
+}
+
+/* EFECTOS */
+
+.seccion-testimonio::before {
+  content: "";
+  position: absolute;
+  width: 720px;
+  height: 720px;
+  left: -240px;
+  top: 10%;
+  background: #49c6f3;
+  opacity: 0.24;
+  filter: blur(180px);
+  z-index: 0;
+}
+
+.seccion-testimonio::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  right: -240px;
+  bottom: 0;
+  background: #f89485;
+  opacity: 0.22;
+  filter: blur(180px);
+  z-index: 0;
+}
+/* CONTENEDOR */
+
+.testimonio-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+/* LOGO */
+
+.logo-testimonio {
+  width: 210px;
+  display: block;
+  margin: 0 auto 80px auto;
+}
+
+/* COMILLAS */
+
+.comillas {
+  position: absolute;
+  left: -40px;
+  top: 110px;
+  font-size: 300px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.18);
+  font-family: serif;
+}
+
+/* TEXO */
+
+.texto-testimonio {
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* RESALTADO */
+
+.texto-testimonio span {
+  display: block;
+}
+.texto-testimonio .resaltado {
+  color: #f89485;
+}
+
+/* AUTOR */
+
+.autor-testimonio {
+  width: 100%;
+  max-width: 1250px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  text-align: right;
+}
+
+.autor-testimonio div {
+  width: fit-content;
+  text-align: right;
+}
+.autor-testimonio div {
+  transform: translateX(80px);
+}
+/* NOMBRE */
+
+.autor-testimonio h3 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* CARGO */
+.autor-testimonio p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 20px;
+}
+
+/* Punto*/
