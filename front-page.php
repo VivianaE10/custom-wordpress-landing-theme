@@ -193,6 +193,9 @@
                 </svg>
               </button>
             </div>
+            <p class="servicio-card__descripcion">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </article>
 
           <article class="servicio-card">
@@ -209,6 +212,9 @@
                 </svg>
               </button>
             </div>
+               <p class="servicio-card__descripcion">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
           </article>
 
           <article class="servicio-card">
@@ -227,6 +233,9 @@
                 </svg>
               </button>
             </div>
+               <p class="servicio-card__descripcion">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                 </p>
           </article>
 
           <article class="servicio-card">
@@ -245,6 +254,9 @@
                 </svg>
               </button>
             </div>
+               <p class="servicio-card__descripcion">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               </p>
           </article>
 
         </div>

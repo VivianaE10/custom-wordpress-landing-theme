@@ -591,21 +591,24 @@ body {
 
 .servicio-card {
   position: relative;
-  width: 100%;
-  padding: 2rem 0 7rem;
+  padding: 2rem 0 3rem;
 }
 .servicio-card::after {
   content: "";
   position: absolute;
   left: 0;
-  right: 6rem;
+  right: 4rem;
   bottom: 0;
   height: 2px;
   background: #ffffff;
+  transition: background-color 0.3s ease;
+}
+.servicio-card:hover {
+  transform: translateY(-1rem);
 }
 /* bajar solo el top de la card 2,3,4 */
 .servicio-card:not(:first-child) {
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
 }
 
@@ -614,7 +617,7 @@ body {
   grid-template-columns: 1fr auto;
   gap: 2rem;
   align-items: center;
-  padding-right: 6rem;
+  padding-right: 4rem;
 }
 
 .servicio-card__titulo {
@@ -626,9 +629,10 @@ body {
   line-height: 1.2;
   letter-spacing: -0.06rem;
   text-transform: uppercase;
-  max-width: 22rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
-
 .servicio-card__flecha {
   background: transparent;
   border: none;
@@ -639,11 +643,38 @@ body {
   justify-content: center;
   flex: 0 0 auto;
   cursor: pointer;
-  transform: translateY(0.4rem);
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
-
 .servicio-card__flecha svg {
   width: 4rem;
   height: 4rem;
   display: block;
+}
+.servicio-card__descripcion {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  color: #f89485;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  transition: max-height 0.35s ease;
+}
+.servicio-card:hover .servicio-card__titulo {
+  transform: translateY(-0.5rem);
+  color: #f89485;
+}
+.servicio-card:hover .servicio-card__flecha {
+  transform: translateY(-0.5rem);
+  color: #f89485;
+}
+.servicio-card:hover::after {
+  background: #f89485;
+}
+.servicio-card:hover .servicio-card__descripcion {
+  max-height: 10rem;
+  opacity: 1;
+  margin-top: 1rem;
 }
