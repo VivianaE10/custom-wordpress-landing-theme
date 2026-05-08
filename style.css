@@ -497,3 +497,65 @@ body {
   background: #ffffff;
   border-color: #ffffff;
 }
+/*------------------------------seccion 5*/
+.seccion-servicios {
+  background: #232a33;
+  max-width: 1900px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 4rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-servicios__contenedor {
+  width: calc(100% - 8rem);
+  margin: 0 auto;
+  position: relative;
+}
+
+.seccion-servicios__hero {
+  width: calc(100% + 8rem);
+  margin-left: -3.2rem;
+  margin-top: 8rem;
+}
+
+.seccion-servicios__bgtext {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.seccion-servicios__contenido {
+  position: relative;
+  z-index: 3;
+  margin-top: -6rem; /*subir el texto b2b encima de la imagen*/
+}
+
+.seccion-servicios__intro {
+  padding-top: 1rem;
+  padding-left: 9rem;
+}
+
+.seccion-servicios__titulo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1.5rem;
+  color: #ffffff;
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  line-height: 0.95;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.12rem;
+  gap: 2rem;
+}
+.titulo-blanco-servicios,
+.titulo-rosado-servicios {
+  display: block;
+}
+
+.titulo-rosado-servicios {
+  color: #f89485;
+  padding-left: 8rem; /* mover hacia la derecha el texto advisory*/
+}

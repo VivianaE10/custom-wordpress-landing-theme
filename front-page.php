@@ -142,5 +142,27 @@
   </div>
 </section>
 
+<!-- Sección 5-->
 
+<section class="seccion-servicios">
+  <div class="seccion-servicios__contenedor">
+
+    <div class="seccion-servicios__hero">
+      <img
+        class="seccion-servicios__bgtext"
+        src="<?php echo get_template_directory_uri(); ?>/assets/img/ency.png"
+        alt="ENCY & ADVISORY"
+      >
+    </div>
+
+    <div class="seccion-servicios__contenido">
+      <div class="seccion-servicios__intro">
+        <h2 class="seccion-servicios__titulo">
+          <span class="titulo-blanco-servicios">B2B AGENCY</span>
+          <span class="titulo-rosado-servicios">
+            &amp; ADVISORY
+          </span>
+        </h2>
+
+</section>
 <?php get_footer(); ?>
