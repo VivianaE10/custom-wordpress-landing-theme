@@ -90,7 +90,7 @@
     >
 
     <div class="contenido-testimonio">
-      <span class="comillas">“</span>s
+      <span class="comillas">“</span>
       <h2 class="texto-testimonio">
          <h2 class="texto-testimonio">
          <span>We’re really impressed with their</span>
@@ -107,6 +107,40 @@
    </div>
 </section>
 
+<!-- Sección 4 -->
+<section class="seccion-campania">
+  <div class="seccion-campania__contenedor">
+
+    <div class="seccion-campania__encabezado">
+      <div class="seccion-campania__titulos">
+        <h2 class="seccion-campania__titulo titulo-blanco">SHOW UP BOLDLY</h2>
+        <h2 class="seccion-campania__titulo titulo-rosado">SHOW UP CONFIDENTLY</h2>
+      </div>
+
+      <a href="#" class="seccion-campania__flecha" aria-label="Siguiente">
+        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="seccion-campania__imagen-completa">
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/img/img-campaña.png"
+        alt="Campaña completa"
+      >
+    </div>
+
+    <div class="seccion-campania__puntos">
+      <span class="punto activo"></span>
+      <span class="punto"></span>
+      <span class="punto"></span>
+      <span class="punto"></span>
+    </div>
+
+  </div>
+</section>
 
 
 <?php get_footer(); ?>

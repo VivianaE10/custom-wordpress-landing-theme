@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 html {
@@ -127,9 +126,9 @@ body {
 .seccion-b2b {
   position: relative;
   margin-top: -27rem;
-  padding-bottom: 15rem;
+  padding-bottom: 2rem;
   background: linear-gradient(to bottom, #232a3300 0%, #232a33 100%);
-  z-index: 5;
+  z-index: 3;
 }
 .intro-b2b {
   text-align: center;
@@ -221,19 +220,18 @@ body {
 .seccion-testimonio {
   position: relative;
   overflow: hidden;
-  margin-top: -8px;
+  margin-top: -4rem;
   padding: 170px 0 120px;
   max-width: 1900px;
   margin-left: auto;
   margin-right: auto;
-
   background:
     linear-gradient(
       to bottom,
       rgba(35, 42, 51, 0) 0%,
       rgba(35, 42, 51, 0.35) 8%,
       rgba(35, 42, 51, 0.75) 18%,
-      #232a33 34%
+      #232a33 100%
     ),
     radial-gradient(
       circle at 12% 20%,
@@ -266,14 +264,18 @@ body {
 .seccion-testimonio::after {
   content: "";
   position: absolute;
-  width: 700px;
-  height: 700px;
-  right: -240px;
-  bottom: 0;
-  background: #f89485;
-  opacity: 0.22;
-  filter: blur(180px);
-  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 7rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 42, 51, 0) 0%,
+    rgba(35, 42, 51, 0.35) 45%,
+    #232a33 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 /* CONTENEDOR */
 
@@ -292,7 +294,7 @@ body {
 .logo-testimonio {
   width: 210px;
   display: block;
-  margin: 0 auto 80px auto;
+  margin: 180px auto 80px;
 }
 
 /* COMILLAS */
@@ -365,4 +367,133 @@ body {
   font-size: 20px;
 }
 
-/* Punto*/
+/* ----------------------------------------------seccion 4*/
+.seccion-campania {
+  position: relative;
+  z-index: 3;
+  max-width: 1900px;
+  width: 96%;
+  margin: -5rem auto 0;
+  padding-top: 3rem;
+  overflow: hidden;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(35, 42, 51, 0.96) 0%,
+      rgba(35, 42, 51, 0.78) 12%,
+      rgba(35, 42, 51, 0.3) 30%,
+      rgba(35, 42, 51, 0) 48%
+    ),
+    radial-gradient(
+      circle at 8% 0%,
+      rgba(73, 198, 243, 0.38) 0%,
+      rgba(73, 198, 243, 0.18) 22%,
+      rgba(73, 198, 243, 0) 52%
+    ),
+    radial-gradient(
+      circle at 88% 14%,
+      rgba(248, 148, 133, 0.24) 0%,
+      rgba(248, 148, 133, 0) 42%
+    ),
+    #232a33;
+}
+
+.seccion-campania::before {
+  display: none;
+}
+
+.seccion-campania__contenedor {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 8rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.seccion-campania__encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 17rem;
+  margin-bottom: 6rem;
+}
+
+.seccion-campania__titulos {
+  padding-left: 3rem;
+  max-width: 70rem;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 0;
+  position: relative;
+  top: -0.5rem;
+  transform: translateY(-2.5rem);
+}
+
+.titulo-blanco,
+.titulo-rosado {
+  color: #ffffff;
+  font-size: clamp(4.3rem, 6.2vw, 6.4rem);
+  font-weight: 800;
+  letter-spacing: -0.28rem;
+  transform: scaleX(1.09);
+  line-height: 0.92;
+  letter-spacing: -0.18rem;
+  margin: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.titulo-rosado {
+  color: #f89485;
+}
+.seccion-campania__flecha {
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.seccion-campania__flecha:hover {
+  transform: translateX(0.3rem);
+}
+
+.seccion-campania__imagen-completa {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.35);
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+.seccion-campania__imagen-completa img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.seccion-campania__puntos {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.punto {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.12rem solid rgba(255, 255, 255, 0.85);
+  background: transparent;
+}
+
+.punto.activo {
+  background: #ffffff;
+  border-color: #ffffff;
+}
