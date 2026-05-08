@@ -559,3 +559,91 @@ body {
   color: #f89485;
   padding-left: 8rem; /* mover hacia la derecha el texto advisory*/
 }
+
+/* ---------------------texto y bloques */
+
+.seccion-servicios__bloque {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 6rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.seccion-servicios__texto {
+  padding-left: 11rem;
+  width: 100%;
+  max-width: 50rem;
+  padding-top: 1rem;
+}
+
+.seccion-servicios__texto p {
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 2.3rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.seccion-servicios__lista {
+  width: 100%;
+}
+
+.servicio-card {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0 7rem;
+}
+.servicio-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 6rem;
+  bottom: 0;
+  height: 2px;
+  background: #ffffff;
+}
+/* bajar solo el top de la card 2,3,4 */
+.servicio-card:not(:first-child) {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.servicio-card__fila {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding-right: 6rem;
+}
+
+.servicio-card__titulo {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.3rem, 3.5vw, 3.6rem);
+  line-height: 0.92;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.06rem;
+  text-transform: uppercase;
+  max-width: 22rem;
+}
+
+.servicio-card__flecha {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transform: translateY(0.4rem);
+}
+
+.servicio-card__flecha svg {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}

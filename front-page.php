@@ -141,9 +141,7 @@
 
   </div>
 </section>
-
-<!-- Sección 5-->
-
+<!-- Sección 5 -->
 <section class="seccion-servicios">
   <div class="seccion-servicios__contenedor">
 
@@ -156,13 +154,105 @@
     </div>
 
     <div class="seccion-servicios__contenido">
+
       <div class="seccion-servicios__intro">
         <h2 class="seccion-servicios__titulo">
           <span class="titulo-blanco-servicios">B2B AGENCY</span>
-          <span class="titulo-rosado-servicios">
-            &amp; ADVISORY
-          </span>
+          <span class="titulo-rosado-servicios">&amp; ADVISORY</span>
         </h2>
+      </div>
 
+      <div class="seccion-servicios__bloque">
+        <div class="seccion-servicios__texto">
+          <p>
+            If a management consultancy <br>
+            and indie agency came<br>
+            together, JumpSeat would be <br>
+            the result. We’re unique blend <br>
+            of left and right brain thinking.<br>
+            Strategy and creativity. Deep <br>
+            thinking and get it done.
+          </p>
+        </div>
+
+        <div class="seccion-servicios__lista">
+
+          <article class="servicio-card servicio-card--activo">
+            <div class="servicio-card__fila">
+              <h3 class="servicio-card__titulo">
+                STRATEGIC<br>
+                REVENUE<br>
+                GENERATION<br>
+                ADVISORY
+              </h3>
+
+              <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="servicio-card">
+            <div class="servicio-card__fila">
+              <h3 class="servicio-card__titulo">
+                BRAND<br>
+                DEVELOPMENT
+              </h3>
+
+              <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="servicio-card">
+            <div class="servicio-card__fila">
+              <h3 class="servicio-card__titulo">
+                DEMAND GEN<br>
+                CAMPAIGN<br>
+                STRATEGY AND<br>
+                EXECUTION
+              </h3>
+
+              <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="servicio-card">
+            <div class="servicio-card__fila">
+              <h3 class="servicio-card__titulo">
+                RECRUITMENT,<br>
+                ONBOARDING<br>
+                AND 
+                COACHING
+              </h3>
+
+              <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+<?php get_footer(); ?>
 <?php get_footer(); ?>
