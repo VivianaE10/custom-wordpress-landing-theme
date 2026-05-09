@@ -295,6 +295,45 @@
      became the best possible version of yourself.
     </p>
     </div> 
+    <div class="seccion-with__timeline">
+
+  <div class="seccion-timeline">
+    <h3 class="timeline-item__titulo">
+      ADVISORY FIRMS
+    </h3>
+
+    <p class="timeline-item__subtitulo">
+      <span class="color-sapote">Don’t</span> do
+    </p>
+  </div>
+
+  <div class="timeline-item">
+    <h3 class="timeline-item__titulo">
+      AGENCIES
+    </h3>
+
+    <p class="timeline-item__subtitulo">
+      <span class="color-sapote">For</span> you
+    </p>
+  </div>
+
+  <div class="timeline-item">
+    <h3 class="timeline-item__titulo timeline-item__titulo-mixto">
+        JUMPSEAT
+    </h3>
+
+    <p class="timeline-item__subtitulo">
+      <span class="color-mixto">With</span> you
+    </p>
+  </div>
+
+  <div class="timeline-linea">
+    <span class="timeline-punto"></span>
+    <span class="timeline-punto"></span>
+    <span class="timeline-punto"></span>
+  </div>
+
+</div>
 
   </div>
 </section>
