@@ -740,8 +740,29 @@ body {
     ),
     #232a33;
 }
+.seccion-with::before {
+  content: "";
+  position: absolute;
+  width: 55rem;
+  height: 55rem;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(248, 148, 133, 0.34) 0%,
+    rgba(248, 148, 133, 0.22) 24%,
+    rgba(248, 148, 133, 0.1) 46%,
+    rgba(248, 148, 133, 0) 74%
+  );
+
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
 .seccion-with__contenedor {
   position: relative;
+  z-index: 2;
   width: calc(100% - 8rem);
   margin: 0 auto;
   min-height: 46rem;
@@ -767,6 +788,6 @@ body {
 
 .seccion-with__letra--you {
   right: 12rem;
-  bottom: 3rem;
+  bottom: -3rem;
   width: 38rem;
 }
