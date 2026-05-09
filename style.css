@@ -719,6 +719,7 @@ body {
   overflow: hidden;
   margin-top: -6rem;
   padding-top: 6rem;
+  padding-bottom: 13rem;
   background:
     linear-gradient(
       to bottom,
@@ -919,4 +920,79 @@ body {
 
 .timeline-punto:nth-child(3) {
   left: 100%;
+}
+/* -------------------------------------------------------------seccion 7 */
+.seccion-sales {
+  background: #181d24;
+  max-width: 1900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 0 4rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.seccion-sales__contenedor {
+  width: calc(100% - 8rem);
+  margin: 0 auto;
+}
+
+.seccion-sales__contenido {
+  padding-left: 4rem;
+  width: 100%;
+  max-width: none;
+}
+
+.seccion-sales__titulo {
+  margin: 0;
+  width: 100%;
+  max-width: 99rem;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.8rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.18rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.18);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.seccion-sales__intro {
+  margin: 2rem 0 1rem;
+  max-width: 30rem;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-left: 2rem;
+}
+
+.seccion-sales__texto p {
+  margin: 0;
+  max-width: 56rem;
+  color: #f2f2f2;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-left: 2rem;
+}
+
+.seccion-sales__texto p + p {
+  margin-top: 1rem;
+}
+
+.seccion-sales__boton {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.seccion-sales__boton img {
+  margin-left: 2rem;
+  display: block;
+  width: 17rem;
+  height: auto;
 }

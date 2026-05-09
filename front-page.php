@@ -80,7 +80,7 @@
     </section>
 </div>
 
-<!-- seccion 3  -->
+<!-- ----------------------------------------------------------------------------------seccion 3  -->
 <section class="seccion-testimonio">
   <div class="testimonio-inner">
     <img
@@ -107,7 +107,7 @@
    </div>
 </section>
 
-<!-- Sección 4 -->
+<!-- ------------------------------------------------------------------------------Sección 4 -->
 <section class="seccion-campania">
   <div class="seccion-campania__contenedor">
 
@@ -141,7 +141,7 @@
 
   </div>
 </section>
-<!-- Sección 5 -->
+<!----------------------------------------------------------------------------- Sección 5 -->
 <section class="seccion-servicios">
   <div class="seccion-servicios__contenedor">
 
@@ -266,7 +266,7 @@
   </div>
 </section>
 
-<!--------------seccion 6 -->
+<!--------------------------------------------------seccion 6 -->
 <section class="seccion-with">
   <div class="seccion-with__contenedor">
 
@@ -335,6 +335,45 @@
 
 </div>
 
+  </div>
+</section>
+<!-- ------------------------------------------------------------seccion 7 -->
+<section class="seccion-sales">
+  <div class="seccion-sales__contenedor">
+    <div class="seccion-sales__contenido">
+
+      <h2 class="seccion-sales__titulo">
+        ELIMINATE RANDOM ACTS OF<br>
+        SALES &amp; MARKETING FOREVER
+      </h2>
+
+      <p class="seccion-sales__intro">
+        This is the hill we’re willing to die on.
+      </p>
+
+      <div class="seccion-sales__texto">
+        <p>
+          We exist to stop all the random acts of content.<br>
+          Half baked webinars an uninspired emails. One-<br>
+          off tweets and abandoned social channels.<br>
+          Leadership meetings that start with, “I just heard<br>
+          this on a podcast...”
+        </p>
+
+        <p>
+          You get in. RAofS&amp;M produce chaos but not<br>
+          consistent results.
+        </p>
+      </div>
+
+      <a href="#" class="seccion-sales__boton" aria-label="Get to know us">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-sale.png"
+          alt="Get to know us"
+        >
+      </a>
+
+    </div>
   </div>
 </section>
 <?php get_footer(); ?>
