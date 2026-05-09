@@ -266,5 +266,24 @@
   </div>
 </section>
 
-<?php get_footer(); ?>
+<!--------------seccion 6 -->
+<section class="seccion-with">
+  <div class="seccion-with__contenedor">
+
+    <div class="seccion-with__decoracion">
+      <img
+        class="seccion-with__letra seccion-with__letra--with"
+        src="<?php echo get_template_directory_uri(); ?>/assets/img/WITH.png"
+        alt="WITH"
+      >
+
+      <img
+        class="seccion-with__letra seccion-with__letra--you"
+        src="<?php echo get_template_directory_uri(); ?>/assets/img/YOU.png"
+        alt="YOU"
+      >
+    </div>
+
+  </div>
+</section>
 <?php get_footer(); ?>
