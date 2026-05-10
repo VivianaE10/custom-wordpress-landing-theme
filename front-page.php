@@ -376,4 +376,16 @@
     </div>
   </div>
 </section>
+<!-- -------------------------------------------------------------------seccion 8 -->
+  <section class="seccion-start">
+
+  <div class="seccion-start__bg">
+    <img
+      src="<?php echo get_template_directory_uri(); ?>/assets/img/start-here.png"
+      alt="Start Here"
+      class="seccion-start__bgimg"
+    >
+  </div>
+
+</section>
 <?php get_footer(); ?>

@@ -995,4 +995,24 @@ body {
   display: block;
   width: 17rem;
   height: auto;
+  margin-bottom: 6rem;
+}
+/* ------------------------seccion 8 */
+.seccion-start {
+  background: #232a33;
+  max-width: 1900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 15rem 0;
+}
+.seccion-start__bg {
+  position: relative;
+  width: 100%;
+}
+.seccion-start__bgimg {
+  display: block;
+  width: 96%;
+  max-width: none;
+  margin-left: 5rem;
 }
