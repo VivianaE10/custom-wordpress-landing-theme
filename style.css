@@ -1046,7 +1046,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .seccion-start__titulo {
   margin: 0;
   color: #ffffff;
@@ -1078,4 +1077,61 @@ body {
     0 0 2px rgba(248, 148, 133, 0.35),
     0 0 6px rgba(248, 148, 133, 0.12);
   -webkit-font-smoothing: antialiased; /*suaviza los bordes */
+}
+/* --------------------------------------------------------------------- */
+.seccion-start__card {
+  display: grid;
+  background: #232a33;
+  max-width: 1900px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  width: calc(100% - 8rem);
+  position: relative;
+  z-index: 4rem;
+  padding-top: 4rem;
+}
+.seccion-start__imagen {
+  overflow: hidden; /*recortar o ocultar las lineas blancas img avion */
+  line-height: 0;
+}
+.seccion-start__imagen img {
+  display: block;
+  width: 92%;
+  height: auto;
+  margin-top: -8px; /*recortar parte superior img */
+  clip-path: inset(0 6px 0 0); /*recota el lado derecho*/
+}
+.seccion-start__info {
+  max-width: 60rem;
+  margin-right: 8rem;
+}
+.seccion-start__cardtitulo {
+  margin: -6rem 0 19rem;
+  color: #f0f0f0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.2rem, 3vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.08rem;
+  margin-bottom: 2rem;
+}
+.seccion-start__descripcion {
+  margin: 0;
+  color: #fffdfd;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.22rem;
+  font-weight: 400;
+  line-height: 2;
+  max-width: 72rem;
+}
+.seccion-start__boton {
+  display: inline-block;
+  margin-top: 4rem;
+}
+
+.seccion-start__boton img {
+  display: block;
+  width: 16rem;
 }

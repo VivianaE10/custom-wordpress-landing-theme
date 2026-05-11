@@ -378,7 +378,6 @@
 </section>
 <!-- -------------------------------------------------------------------seccion 8 -->
   <section class="seccion-start">
-
   <div class="seccion-start__bg">
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/img/start-here.png"
@@ -390,6 +389,39 @@
   <h2 class="seccion-start__titulo">FEELING LOST?</h2>
   <p class="seccion-start__subtitulo">START HERE.</p>
 </div>
-
 </section>
+<!-- 
+-------------------------------------------------------------------------------- -->
+<div class="seccion-start__card">
+  <div class="seccion-start__imagen">
+    <img
+      src="<?php echo get_template_directory_uri(); ?>/assets/img/img-avion.jpg"
+      alt="Airplane"
+    >
+  </div>
+  <div class="seccion-start__info">
+    <h3 class="seccion-start__cardtitulo">
+      Ideal client profiles and the <br> 
+      JumpSeat $5,000 FedEx rule.
+    </h3>
+
+    <p class="seccion-start__descripcion">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod 
+      tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.
+    </p>
+
+    <a href="#" class="seccion-start__boton">
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-start.png"
+        alt="Start Here"
+      >
+    </a>
+
+  </div>
+
+
+</div>
+
 <?php get_footer(); ?>
