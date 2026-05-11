@@ -386,6 +386,10 @@
       class="seccion-start__bgimg"
     >
   </div>
+  <div class="seccion-start__contenido">
+  <h2 class="seccion-start__titulo">FEELING LOST?</h2>
+  <p class="seccion-start__subtitulo">START HERE.</p>
+</div>
 
 </section>
 <?php get_footer(); ?>
