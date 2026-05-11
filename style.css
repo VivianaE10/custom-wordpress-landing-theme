@@ -1085,11 +1085,7 @@ body {
   max-width: 1900px;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
   align-items: center;
-  width: calc(100% - 8rem);
-  position: relative;
-  z-index: 4rem;
   padding-top: 4rem;
 }
 .seccion-start__imagen {
@@ -1098,17 +1094,19 @@ body {
 }
 .seccion-start__imagen img {
   display: block;
-  width: 92%;
+  width: 90%;
   height: auto;
   margin-top: -8px; /*recortar parte superior img */
   clip-path: inset(0 6px 0 0); /*recota el lado derecho*/
 }
 .seccion-start__info {
-  max-width: 60rem;
-  margin-right: 8rem;
+  margin-right: 0;
+  max-width: none;
+  width: 100%;
+  margin-left: -1rem;
 }
 .seccion-start__cardtitulo {
-  margin: -6rem 0 19rem;
+  margin: -5rem 0 19rem;
   color: #f0f0f0;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(2.2rem, 3vw, 3.5rem);
@@ -1123,8 +1121,8 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.22rem;
   font-weight: 400;
-  line-height: 2;
-  max-width: 72rem;
+  line-height: 2.1;
+  letter-spacing: 0.04rem;
 }
 .seccion-start__boton {
   display: inline-block;

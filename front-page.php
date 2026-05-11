@@ -406,9 +406,9 @@
     </h3>
 
     <p class="seccion-start__descripcion">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod 
-      tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod<br> 
+      tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br>
       labore et dolore magna aliqua.
     </p>
 
