@@ -420,8 +420,14 @@
     </a>
 
   </div>
-
-
 </div>
+<!-- ----------------------------------------------------------seccion formulario  -->
+<section class="seccion-formulario">
+  <div class="seccion-formulario__contenedor">
+    <div class="seccion-formulario__tarjeta">
+      <!-- aquí va todo el formulario -->
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>

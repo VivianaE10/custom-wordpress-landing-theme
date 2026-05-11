@@ -997,7 +997,7 @@ body {
   height: auto;
   margin-bottom: 6rem;
 }
-/* ------------------------seccion 8 */
+/* -------------------------------------------------------seccion 8 */
 .seccion-start {
   background: #232a33;
   max-width: 1900px;
@@ -1078,15 +1078,25 @@ body {
     0 0 6px rgba(248, 148, 133, 0.12);
   -webkit-font-smoothing: antialiased; /*suaviza los bordes */
 }
-/* --------------------------------------------------------------------- */
+/* ----------------------------------------------------------------seccion 9*/
 .seccion-start__card {
   display: grid;
-  background: #232a33;
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 8% 128%,
+      rgba(73, 198, 243, 0.78) 0%,
+      rgba(73, 198, 243, 0.48) 12%,
+      rgba(73, 198, 243, 0.24) 26%,
+      rgba(73, 198, 243, 0) 52%
+    ),
+    #232a33;
   max-width: 1900px;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding-top: 4rem;
+  padding-right: 4rem;
 }
 .seccion-start__imagen {
   overflow: hidden; /*recortar o ocultar las lineas blancas img avion */
@@ -1132,4 +1142,63 @@ body {
 .seccion-start__boton img {
   display: block;
   width: 16rem;
+}
+.seccion-start__card {
+  position: relative;
+  overflow: hidden;
+}
+
+/*-------------------------------------- seccion formulario  */
+.seccion-formulario {
+  position: relative;
+  background: #232a33;
+  padding: 20rem 0;
+  max-width: 1900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.seccion-formulario::before {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -6rem;
+  width: 92rem;
+  height: 60rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(73, 198, 243, 0.42) 0%,
+    rgba(73, 198, 243, 0.26) 24%,
+    rgba(73, 198, 243, 0.12) 48%,
+    rgba(73, 198, 243, 0) 74%
+  );
+  filter: blur(7rem);
+  pointer-events: none;
+  z-index: 0;
+}
+.seccion-formulario__contenedor {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 19rem;
+}
+.seccion-formulario__tarjeta {
+  position: relative;
+  z-index: 3;
+  width: 83rem;
+  min-height: 118.2rem;
+
+  background-image: url("assets/img/ta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #232a33 0%, #1a2027 100%);
+
+  box-shadow:
+    0 2.5rem 6rem rgba(0, 0, 0, 0.65),
+    0 1rem 2rem rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 8rem rgba(0, 0, 0, 0.25);
 }
