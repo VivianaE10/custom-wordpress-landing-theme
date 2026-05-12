@@ -467,15 +467,33 @@
 </a>
 
 <div class="tarjeta-contacto">
-
   <div class="tarjeta-contacto__raya"></div>
 
   <div class="tarjeta-contacto__contenido">
-
     <div class="tarjeta-contacto__imagen">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dan-persona.png" alt="CEO">
     </div>
+
+    <div class="tarjeta-contacto__info">
+      <p class="tarjeta-contacto__texto">
+        Email our CEO directly,
+        <span class="correo">dan@domain.co</span> or<br>
+        drop a line to our team.
+      </p>
+
+      <p class="tarjeta-contacto__frase">
+        <span class="frase-azul">PILOTS</span>
+        <span class="frase-mezcla-1">PREVIOUSLY.</span>
+        <span class="frase-mezcla-2">TAKEOF</span>
+        <span class="frase-salmon">TODAY.</span>
+      </p>
     </div>
+  </div>
+  <a class="tarjeta-contacto__boton" href="#">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-meet.png" alt="Meet the team">
+      </a>
+</div>
+
   </div>
 </section>
 
