@@ -465,6 +465,16 @@
     <path d="M13 6l6 6-6 6"></path>
   </svg>
 </a>
+
+<div class="tarjeta-contacto">
+
+  <div class="tarjeta-contacto__raya"></div>
+
+  <div class="tarjeta-contacto__contenido">
+
+    <div class="tarjeta-contacto__imagen">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dan-persona.png" alt="CEO">
+    </div>
     </div>
   </div>
 </section>

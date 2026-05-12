@@ -1161,17 +1161,18 @@ body {
 .seccion-formulario::before {
   content: "";
   position: absolute;
-  top: -1rem; /*mueve el glow verticalmente desde la parte superior del contenedor*/
-  width: 90rem; /*ancho del glow*/
+  top: 12rem; /*mueve el glow verticalmente desde la parte superior del contenedor*/
+  width: 85rem; /*ancho del glow*/
   height: 80rem; /*largo del glow*/
   background: radial-gradient(
-    ellipse at center,
-    rgba(73, 198, 243, 0.82) 0%,
-    rgba(73, 198, 243, 0.48) 24%,
-    rgba(73, 198, 243, 0.2) 46%,
-    rgba(73, 198, 243, 0) 72%
+    ellipse at 45% 12%,
+    rgba(73, 198, 243, 0.56) 0%,
+    rgba(73, 198, 243, 0.38) 24%,
+    rgba(73, 198, 243, 0.22) 48%,
+    rgba(73, 198, 243, 0.08) 72%,
+    rgba(73, 198, 243, 0.01) 100%
   );
-  filter: blur(4.2rem);
+  filter: blur(6rem);
   pointer-events: none;
   z-index: 0;
 }
@@ -1289,7 +1290,7 @@ body {
   margin-top: 4rem;
   color: #ffffff;
   font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.02rem;
   text-decoration: none;
@@ -1302,4 +1303,56 @@ body {
   width: 2rem;
   height: 2rem;
   flex-shrink: 0;
+}
+
+.tarjeta-contacto__contenido {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 9rem;
+}
+/* raya inferiro*/
+.tarjeta-contacto__raya {
+  width: 100%;
+  height: 2px;
+  background: rgba(199, 199, 199, 0.45);
+  box-shadow:
+    0 0 6px rgba(199, 199, 199, 0.42),
+    0 0 14px rgba(199, 199, 199, 0.22);
+  margin-bottom: 4rem;
+  margin-top: 10rem;
+}
+/* contenedor */
+.tarjeta-contacto__imagen {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  overflow: visible; /*oculta visibilidad de la iamgen*/
+  flex-shrink: 0;
+}
+
+/* aro glow */
+.tarjeta-contacto__imagen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #f89485;
+  box-shadow:
+    0 0 10px rgba(248, 148, 133, 0.75),
+    0 0 22px rgba(248, 148, 133, 0.32),
+    0 0 40px rgba(248, 148, 133, 0.12);
+  pointer-events: none;
+}
+
+/* imagen persona */
+.tarjeta-contacto__imagen img {
+  position: absolute;
+  left: 50%;
+  bottom: -1.2rem;
+  transform: translateX(-50%);
+  width: 128%;
+  max-width: none;
+  height: auto;
+  z-index: 1;
 }
