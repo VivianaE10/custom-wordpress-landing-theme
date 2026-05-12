@@ -425,7 +425,46 @@
 <section class="seccion-formulario">
   <div class="seccion-formulario__contenedor">
     <div class="seccion-formulario__tarjeta">
-      <!-- aquí va todo el formulario -->
+       <div class="formulario__encabezado">
+  <h2 class="formulario__titulo">
+    GET IN TOUCH WITH <span>OUR TEAM</span>
+  </h2>
+</div>
+
+<div class="formulario__fila">
+  <div class="formulario__campo">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </div>
+
+  <div class="formulario__campo">
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+  </div>
+</div>
+
+<div class="formulario__campo formulario__campo--full">
+  <label for="title">Tittle</label>
+  <input type="text" id="title" name="title">
+</div>
+
+<div class="formulario__campo formulario__campo--full">
+  <label for="company">Company</label>
+  <input type="text" id="company" name="company">
+</div>
+
+<div class="formulario__mensaje">
+  <label for="message">Message</label>
+  <textarea id="message" name="message"></textarea>
+</div>
+
+<a href="#" class="formulario__send">
+  <span>SEND</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14"></path>
+    <path d="M13 6l6 6-6 6"></path>
+  </svg>
+</a>
     </div>
   </div>
 </section>

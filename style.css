@@ -1084,11 +1084,12 @@ body {
   position: relative;
   background:
     radial-gradient(
-      circle at 8% 128%,
-      rgba(73, 198, 243, 0.78) 0%,
-      rgba(73, 198, 243, 0.48) 12%,
-      rgba(73, 198, 243, 0.24) 26%,
-      rgba(73, 198, 243, 0) 52%
+      ellipse 80rem 34rem at 8% 112%,
+      rgba(73, 198, 243, 0.9) 0%,
+      rgba(73, 198, 243, 0.62) 10%,
+      rgba(73, 198, 243, 0.34) 20%,
+      rgba(73, 198, 243, 0.14) 30%,
+      rgba(73, 198, 243, 0) 48%
     ),
     #232a33;
   max-width: 1900px;
@@ -1160,18 +1161,17 @@ body {
 .seccion-formulario::before {
   content: "";
   position: absolute;
-  top: -10rem;
-  left: -6rem;
-  width: 92rem;
-  height: 60rem;
+  top: -1rem; /*mueve el glow verticalmente desde la parte superior del contenedor*/
+  width: 90rem; /*ancho del glow*/
+  height: 80rem; /*largo del glow*/
   background: radial-gradient(
     ellipse at center,
-    rgba(73, 198, 243, 0.42) 0%,
-    rgba(73, 198, 243, 0.26) 24%,
-    rgba(73, 198, 243, 0.12) 48%,
-    rgba(73, 198, 243, 0) 74%
+    rgba(73, 198, 243, 0.82) 0%,
+    rgba(73, 198, 243, 0.48) 24%,
+    rgba(73, 198, 243, 0.2) 46%,
+    rgba(73, 198, 243, 0) 72%
   );
-  filter: blur(7rem);
+  filter: blur(4.2rem);
   pointer-events: none;
   z-index: 0;
 }
@@ -1188,17 +1188,118 @@ body {
   position: relative;
   z-index: 3;
   width: 83rem;
+  opacity: 1;
+  padding: 15rem 15rem 4rem;
   min-height: 118.2rem;
-
   background-image: url("assets/img/ta.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background: linear-gradient(180deg, #232a33 0%, #1a2027 100%);
-
   box-shadow:
     0 2.5rem 6rem rgba(0, 0, 0, 0.65),
     0 1rem 2rem rgba(0, 0, 0, 0.35),
     0 0 0 1px rgba(255, 255, 255, 0.04),
     0 0 8rem rgba(0, 0, 0, 0.25);
+}
+/* ------------------formulario  */
+.formulario__encabezado {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.formulario__titulo {
+  margin: -7rem 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.formulario__titulo span {
+  color: #f89485;
+}
+
+.formulario__fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.formulario__campo,
+.formulario__mensaje {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.formulario__campo label,
+.formulario__mensaje label {
+  font-family: "Inter", sans-serif;
+  font-size: 1.47rem;
+  font-weight: 300;
+  letter-spacing: 0.01rem;
+  color: #c7c7c7;
+  margin-bottom: -2rem; /*espacio de la linea con ellabel*/
+}
+
+.formulario__campo input,
+.formulario__mensaje textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.45);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 12 0 0.35rem;
+  outline: none;
+}
+
+.formulario__campo--full {
+  margin-bottom: 5rem;
+}
+.formulario__mensaje {
+  position: relative;
+}
+
+.formulario__mensaje label {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  z-index: 2;
+  margin: 0;
+}
+
+.formulario__mensaje textarea {
+  min-height: 13rem;
+  resize: none;
+  border: 1px solid rgba(242, 242, 242, 0.28);
+  padding: 4.2rem 1.8rem 1.5rem;
+}
+.formulario__send {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-top: 4rem;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.02rem;
+  text-decoration: none;
+  padding-bottom: 0.15rem;
+  border-bottom: 2px solid #ffffff;
+  line-height: 1;
+}
+
+.formulario__send svg {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
 }
