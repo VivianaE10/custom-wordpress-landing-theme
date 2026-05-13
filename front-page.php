@@ -7,13 +7,13 @@
         <div class="overlay-hero"></div>
 
         <img
-            class="nube-izquierda"
+            class="nube-izquierda mover-nube"
             src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-izquierda.png"
             alt="nube izquierda"
         >
 
         <img
-            class="nube-derecha"
+            class="nube-derecha mover-nube"
             src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-derecha.png"
             alt="nube derecha"
         >
@@ -125,12 +125,36 @@
       </a>
     </div>
 
-    <div class="seccion-campania__imagen-completa">
-      <img
-        src="<?php echo get_template_directory_uri(); ?>/assets/img/img-campaña.png"
-        alt="Campaña completa"
-      >
+   
+    <div class="seccion-campania__imagen-completa seccion-campania__slider">
+
+      <div class="seccion-campania__slide activo">
+        <img
+        class=""
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/img-campaña.png"
+          alt="Campaña 1"
+        >
+      </div>
+
+      <div class="seccion-campania__slide">
+        <img
+          class="imagen-ajustada"
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-2.png"
+          alt="Campaña 2"
+        >
+      </div>
+
+      <div class="seccion-campania__slide">
+        <img
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-3.png"
+          alt="Campaña 3"
+        >
+      </div>
+
+     
+
     </div>
+
 
     <div class="seccion-campania__puntos">
       <span class="punto activo"></span>

@@ -18,12 +18,20 @@ body {
   margin: 0 auto;
   position: relative;
   background-image:
-    linear-gradient(to bottom, #232a33, #232a3300), url("./assets/img/bg.png");
+    linear-gradient(to bottom, #232a33cc, #232a3399), url("./assets/img/bg.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  filter: contrast(1.18) brightness(1.02) saturate(1.08);
 }
 
+.hero,
+.seccion-b2b,
+.header {
+  position: relative;
+  z-index: 1;
+}
 /* HEADER */
 
 .header {
@@ -1472,34 +1480,56 @@ body {
 }
 /* ----------------------------------------------animaciones  */
 
-/* ANIMACION NUBES */
+/* animacion nubes */
 
 .nube-izquierda {
   animation: moverNubeIzquierda 7s ease-in-out infinite;
 }
-
 .nube-derecha {
   animation: moverNubeDerecha 9s ease-in-out infinite;
 }
-
 @keyframes moverNubeIzquierda {
   0%,
   100% {
     transform: translateX(0);
   }
-
   50% {
     transform: translateX(18px);
   }
 }
-
 @keyframes moverNubeDerecha {
   0%,
   100% {
     transform: translateX(0);
   }
-
   50% {
     transform: translateX(-18px);
   }
+}
+
+/* --------------------------------animacion carrusel */
+.seccion-campania__imagen-completa.seccion-campania__slider {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.seccion-campania__slide {
+  display: none;
+  width: 100%;
+}
+.seccion-campania__slide.activo {
+  display: block;
+}
+.seccion-campania__slide img {
+  display: block;
+  width: 100%;
+  height: 42rem;
+  object-fit: contain;
+}
+.seccion-campania__slide:nth-child(2) img {
+  width: 100%;
+  height: 42rem;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
 }

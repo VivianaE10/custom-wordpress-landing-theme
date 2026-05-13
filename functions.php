@@ -1,5 +1,4 @@
 <?php
-
 function cargar_estilos_theme() {
     wp_enqueue_style(
         'estilos-theme',
@@ -8,13 +7,13 @@ function cargar_estilos_theme() {
         filemtime(get_stylesheet_directory() . '/style.css')
     );
 
-       wp_enqueue_script(
+    wp_enqueue_script(
         'animations',
-        get_template_directory_uri() . '/assets/js/animations.js',
+        get_stylesheet_directory_uri() . '/assets/js/animations.js',
         array(),
-        '1.0',
-        true
+        filemtime(get_stylesheet_directory() . '/assets/js/animations.js'),
+        false
     );
 }
-
 add_action('wp_enqueue_scripts', 'cargar_estilos_theme');
+

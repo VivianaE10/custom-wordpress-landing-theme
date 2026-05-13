@@ -1,24 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const nubes = document.querySelectorAll(".mover-nube");
+  const slider = document.querySelector(".seccion-campania__slider");
+  if (!slider) return;
 
-  if (!nubes.length) return;
+  const slides = slider.querySelectorAll(".seccion-campania__slide");
+  const puntos = document.querySelectorAll(".seccion-campania__puntos .punto");
+  const botonSiguiente = document.querySelector(".seccion-campania__flecha");
 
-  let ultimoScroll = window.scrollY;
-  const posiciones = Array.from({ length: nubes.length }, () => 0);
+  if (!slides.length) return;
 
-  function animarNubes() {
-    const scrollActual = window.scrollY;
-    const diferencia = scrollActual - ultimoScroll;
+  let indiceActual = 0;
 
-    nubes.forEach((nube, index) => {
-      const velocidad = index % 2 === 0 ? 0.03 : -0.02;
-      posiciones[index] += diferencia * velocidad;
-      nube.style.transform = `translate3d(${posiciones[index]}px, 0, 0)`;
+  function mostrarSlide(indice) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("activo", i === indice);
     });
 
-    ultimoScroll = scrollActual;
-    requestAnimationFrame(animarNubes);
+    puntos.forEach((punto, i) => {
+      punto.classList.toggle("activo", i === indice);
+    });
+
+    indiceActual = indice;
   }
 
-  requestAnimationFrame(animarNubes);
+  function siguienteSlide() {
+    const nuevoIndice = (indiceActual + 1) % slides.length;
+    mostrarSlide(nuevoIndice);
+  }
+
+  if (botonSiguiente) {
+    botonSiguiente.addEventListener("click", (e) => {
+      e.preventDefault();
+      siguienteSlide();
+    });
+  }
+
+  puntos.forEach((punto, i) => {
+    punto.addEventListener("click", () => {
+      mostrarSlide(i);
+    });
+  });
+
+  mostrarSlide(0);
+
+  setInterval(() => {
+    siguienteSlide();
+  }, 3000);
 });
