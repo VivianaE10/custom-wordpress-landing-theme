@@ -17,10 +17,8 @@ body {
   max-width: 1900px;
   margin: 0 auto;
   position: relative;
-
   background-image:
     linear-gradient(to bottom, #232a33, #232a3300), url("./assets/img/bg.png");
-
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -220,63 +218,41 @@ body {
 .seccion-testimonio {
   position: relative;
   overflow: hidden;
-  margin-top: -4rem;
   padding: 170px 0 120px;
   max-width: 1900px;
   margin-left: auto;
   margin-right: auto;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(35, 42, 51, 0) 0%,
-      rgba(35, 42, 51, 0.35) 8%,
-      rgba(35, 42, 51, 0.75) 18%,
-      #232a33 100%
-    ),
-    radial-gradient(
-      circle at 12% 20%,
-      rgba(73, 198, 243, 0.4) 0%,
-      rgba(73, 198, 243, 0) 46%
-    ),
-    radial-gradient(
-      circle at 88% 76%,
-      rgba(248, 148, 133, 0.32) 0%,
-      rgba(248, 148, 133, 0) 44%
-    ),
-    #232a33;
+  background: #232a33;
 }
-
-/* EFECTOS */
-
+/* ------------------------glow lado izquierdo  */
 .seccion-testimonio::before {
   content: "";
   position: absolute;
-  width: 720px;
-  height: 720px;
-  left: -240px;
-  top: 10%;
-  background: #49c6f3;
-  opacity: 0.24;
-  filter: blur(180px);
+  width: 760px;
+  height: 320px;
+  left: -80px;
+  background: #3aafe2;
+  opacity: 0.3;
+  filter: blur(130px);
+  border-radius: 50%;
+  pointer-events: none;
   z-index: 0;
 }
-
 .seccion-testimonio::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 7rem;
-  background: linear-gradient(
-    to bottom,
-    rgba(35, 42, 51, 0) 0%,
-    rgba(35, 42, 51, 0.35) 45%,
-    #232a33 100%
-  );
+  width: 780px;
+  height: 480px;
+  left: -140px;
+  top: 260px;
+  background: #f89485;
+  opacity: 0.18;
+  filter: blur(140px);
+  border-radius: 50%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
+
 /* CONTENEDOR */
 
 .testimonio-inner {
@@ -366,7 +342,12 @@ body {
   color: rgba(255, 255, 255, 0.7);
   font-size: 20px;
 }
-
+.seccion-testimonio,
+.seccion-campania {
+  position: relative;
+  background: #232a33;
+  overflow: visible;
+}
 /* ----------------------------------------------seccion 4*/
 .seccion-campania {
   position: relative;
@@ -377,30 +358,7 @@ body {
   padding-top: 3rem;
   overflow: hidden;
   font-family: "Plus Jakarta Sans", sans-serif;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(35, 42, 51, 0.96) 0%,
-      rgba(35, 42, 51, 0.78) 12%,
-      rgba(35, 42, 51, 0.3) 30%,
-      rgba(35, 42, 51, 0) 48%
-    ),
-    radial-gradient(
-      circle at 8% 0%,
-      rgba(73, 198, 243, 0.38) 0%,
-      rgba(73, 198, 243, 0.18) 22%,
-      rgba(73, 198, 243, 0) 52%
-    ),
-    radial-gradient(
-      circle at 88% 14%,
-      rgba(248, 148, 133, 0.24) 0%,
-      rgba(248, 148, 133, 0) 42%
-    ),
-    #232a33;
-}
-
-.seccion-campania::before {
-  display: none;
+  background: #232a33;
 }
 
 .seccion-campania__contenedor {
@@ -497,6 +455,14 @@ body {
   background: #ffffff;
   border-color: #ffffff;
 }
+
+.seccion-testimonio,
+.seccion-campania {
+  position: relative;
+  background: #232a33;
+  overflow: visible;
+}
+
 /*------------------------------seccion 5*/
 .seccion-servicios {
   position: relative;
@@ -506,40 +472,36 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 4rem 0 5rem;
   overflow: hidden;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(35, 42, 51, 0) 0%,
-      rgba(35, 42, 51, 0.18) 12%,
-      rgba(35, 42, 51, 0.68) 35%,
-      #232a33 100%
-    ),
-    radial-gradient(
-      circle at 50% 115%,
-      rgba(248, 148, 133, 0.24) 0%,
-      rgba(248, 148, 133, 0) 42%
-    ),
-    radial-gradient(
-      circle at 18% 0%,
-      rgba(73, 198, 243, 0.1) 0%,
-      rgba(73, 198, 243, 0) 38%
-    ),
-    #232a33;
+  background: #232a33;
 }
-.seccion-servicios::after {
+.seccion-campania::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 7rem;
-  background: linear-gradient(
-    to bottom,
-    rgba(35, 42, 51, 0) 0%,
-    rgba(35, 42, 51, 0.35) 40%,
-    #232a33 100%
-  );
+  width: 340px;
+  height: 600px;
+  right: 100px;
+  top: -400px;
+  background: #f89485;
+  opacity: 0.28;
+  filter: blur(115px);
+  border-radius: 50%;
   pointer-events: none;
+  z-index: 0;
+}
+/* -------glow lado derecho */
+.seccion-campania::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 540px;
+  right: -120px;
+  top: -180px;
+  background: #3aafe2;
+  opacity: 0.19;
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
 .seccion-servicios__contenedor {
   width: calc(100% - 8rem);
