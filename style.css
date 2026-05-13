@@ -114,12 +114,11 @@ body {
 .nube-derecha {
   position: absolute;
   top: 4rem;
-  right: 1rem;
+  right: 0.3rem;
   width: 50rem;
   z-index: 2;
   opacity: 0.8;
 }
-
 /* --------------------SECCIÓN 2*/
 .seccion-b2b {
   position: relative;
@@ -1470,4 +1469,37 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.12rem;
   font-weight: 700;
+}
+/* ----------------------------------------------animaciones  */
+
+/* ANIMACION NUBES */
+
+.nube-izquierda {
+  animation: moverNubeIzquierda 7s ease-in-out infinite;
+}
+
+.nube-derecha {
+  animation: moverNubeDerecha 9s ease-in-out infinite;
+}
+
+@keyframes moverNubeIzquierda {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(18px);
+  }
+}
+
+@keyframes moverNubeDerecha {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-18px);
+  }
 }

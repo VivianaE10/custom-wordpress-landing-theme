@@ -7,6 +7,14 @@ function cargar_estilos_theme() {
         array(),
         filemtime(get_stylesheet_directory() . '/style.css')
     );
+
+       wp_enqueue_script(
+        'animations',
+        get_template_directory_uri() . '/assets/js/animations.js',
+        array(),
+        '1.0',
+        true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'cargar_estilos_theme');

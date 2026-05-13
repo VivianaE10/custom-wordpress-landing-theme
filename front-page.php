@@ -489,9 +489,6 @@
       </p>
     </div>
   </div>
-  <a class="tarjeta-contacto__boton" href="#">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-meet.png" alt="Meet the team">
-      </a>
 </div>
 
   </div>
