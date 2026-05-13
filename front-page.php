@@ -138,7 +138,7 @@
 
       <div class="seccion-campania__slide">
         <img
-          class="imagen-ajustada"
+          class="imagen-ajustada2"
           src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-2.png"
           alt="Campaña 2"
         >
@@ -171,7 +171,7 @@
 
     <div class="seccion-servicios__hero">
       <img
-        class="seccion-servicios__bgtext"
+        class="seccion-servicios__bgtext mover-texto-scroll "
         src="<?php echo get_template_directory_uri(); ?>/assets/img/ency.png"
         alt="ENCY & ADVISORY"
       >
@@ -406,7 +406,7 @@
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/img/start-here.png"
       alt="Start Here"
-      class="seccion-start__bgimg"
+      class="seccion-start__bgimg mover-texto-scroll"
     >
   </div>
   <div class="seccion-start__contenido">

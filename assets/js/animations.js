@@ -46,3 +46,26 @@ document.addEventListener("DOMContentLoaded", () => {
     siguienteSlide();
   }, 3000);
 });
+
+// amimacion imagen de letras
+document.addEventListener("DOMContentLoaded", () => {
+  const textos = document.querySelectorAll(".mover-texto-scroll");
+
+  if (!textos.length) return;
+
+  function animarTextos() {
+    const scroll = window.scrollY;
+
+    textos.forEach((texto, index) => {
+      const velocidad = 0.002;
+
+      const moverX = Math.sin(scroll * velocidad) * 40;
+
+      texto.style.transform = `translateX(${moverX}px)`;
+    });
+
+    requestAnimationFrame(animarTextos);
+  }
+
+  animarTextos();
+});

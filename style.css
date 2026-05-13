@@ -1533,3 +1533,7 @@ body {
   object-position: center center;
   display: block;
 }
+/* animacion imagen de letras */
+.mover-texto-scroll {
+  will-change: transform;
+}
