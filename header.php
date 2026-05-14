@@ -14,22 +14,46 @@
 
 <body>
 
-<header class="header">
+    <header class="header">
+        <div class="logo">
+            <?php
+            $logo_texto = get_field('logo_texto', get_option('page_on_front'));
+            echo esc_html($logo_texto ? $logo_texto : 'LOGO');
+            ?>
+        </div>
 
- 
-    <div class="logo">
-        LOGO
-    </div>
+        <nav class="navbar">
 
+             <a href="#">
+                <?php
+                $menu_2_text = get_field('menu_2_text', get_option('page_on_front'));
+                echo esc_html($menu_2_text ? $menu_2_text : 'BELIEFS');
+                ?>
+            </a>
+            <a href="#">
+                <?php
+                $menu_2_text = get_field('menu_2_text', get_option('page_on_front'));
+                echo esc_html($menu_2_text ? $menu_2_text : 'BELIEFS');
+                ?>
+            </a>
+            <a href="#">
+                <?php
+                $menu_3_text = get_field('menu_3_text', get_option('page_on_front'));
+                echo esc_html($menu_3_text ? $menu_3_text : 'CASE STUDIES');
+                ?>
+            </a>
+            <a href="#">
+                <?php
+                $menu_4_text = get_field('menu_4_text', get_option('page_on_front'));
+                echo esc_html($menu_4_text ? $menu_4_text : 'ABOUT US');
+                ?>
+            </a>
 
-    <nav class="navbar">
-
-        <a href="#">OUR SERVICES</a>
-        <a href="#">BELIEFS</a>
-        <a href="#">CASE STUDIES</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">JOIN US</a>
-
-    </nav>
-
-</header>
+            <a href="#">
+                <?php
+                $menu_5_text = get_field('menu_5_text', get_option('page_on_front'));
+                echo esc_html($menu_5_text ? $menu_5_text : 'JOIN US');
+                ?>
+            </a>
+        </nav>
+    </header>
