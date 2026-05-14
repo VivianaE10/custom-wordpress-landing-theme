@@ -95,7 +95,7 @@
         src="<?php echo esc_url($imagen_airplane ? $imagen_airplane['url'] : get_template_directory_uri() . '/assets/img/airplane.png'); ?>"
         alt="airplane board">
 
-      ?>
+
     </div>
 
   </section>
@@ -104,25 +104,70 @@
 <!-- ----------------------------------------------------------------------------------seccion 3  -->
 <section class="seccion-testimonio">
   <div class="testimonio-inner">
+    <?php
+    $logo_testimonio = get_field('logo_testimonio', get_option('page_on_front'));
+    ?>
+
     <img
       class="logo-testimonio"
-      src="<?php echo get_template_directory_uri(); ?>/assets/img/isco.png"
+      src="<?php echo esc_url($logo_testimonio ? $logo_testimonio['url'] : get_template_directory_uri() . '/assets/img/isco.png'); ?>"
       alt="ISCO">
 
     <div class="contenido-testimonio">
       <span class="comillas">“</span>
       <h2 class="texto-testimonio">
         <h2 class="texto-testimonio">
-          <span>We’re really impressed with their</span>
-          <span>expertise in B2B – in our opinion, there’s</span>
-          <span class="resaltado">no one close to their level<span>
+
+          <span>
+            <?php
+            $texto_testimonio_1 = get_field('texto_testimonio_1', get_option('page_on_front'));
+
+            echo esc_html(
+              $texto_testimonio_1
+                ? $texto_testimonio_1
+                : "We’re really impressed with their"
+            );
+            ?>
+          </span>
+
+          <span>
+            <?php
+            $texto_testimonio_2 = get_field('texto_testimonio_2', get_option('page_on_front'));
+
+            echo esc_html(
+              $texto_testimonio_2
+                ? $texto_testimonio_2
+                : "expertise in B2B – in our opinion, there’s"
+            );
+            ?>
+          </span>
+
+          <span class="resaltado">
+            <?php
+            $texto_testimonio_3 = get_field('texto_testimonio_3', get_option('page_on_front'));
+
+            echo esc_html(
+              $texto_testimonio_3
+                ? $texto_testimonio_3
+                : "no one close to their level"
+            );
+            ?>
+          </span>
         </h2>
     </div>s
 
     <div class="autor-testimonio">
       <div>
-        <h3>Joe Doe</h3>
-        <p>CEO, ISCO Industry</p>
+        <h3><?php
+            $autor_testimonio = get_field('autor_testimonio', get_option('page_on_front'));
+
+            echo esc_html($autor_testimonio ? $autor_testimonio : 'Joe Doe');
+            ?></h3>
+        <p> <?php
+            $cargo_testimonio = get_field('cargo_testimonio', get_option('page_on_front'));
+
+            echo esc_html($cargo_testimonio ? $cargo_testimonio : 'CEO, ISCO Industry');
+            ?></p>
       </div>
     </div>
 </section>
