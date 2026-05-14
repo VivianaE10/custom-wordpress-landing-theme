@@ -178,8 +178,25 @@
 
     <div class="seccion-campania__encabezado">
       <div class="seccion-campania__titulos">
-        <h2 class="seccion-campania__titulo titulo-blanco">SHOW UP BOLDLY</h2>
-        <h2 class="seccion-campania__titulo titulo-rosado">SHOW UP CONFIDENTLY</h2>
+        <h2 class="seccion-campania__titulo titulo-blanco">  <?php
+          $titulo_blanco = get_field('titulo_blanco', get_option('page_on_front'));
+
+          echo esc_html(
+            $titulo_blanco
+            ? $titulo_blanco
+            : 'SHOW UP BOLDLY'
+          );
+          ?>
+</h2>
+        <h2 class="seccion-campania__titulo titulo-rosado"> <?php
+          $titulo_rosado = get_field('titulo_rosado', get_option('page_on_front'));
+
+          echo esc_html(
+            $titulo_rosado
+            ? $titulo_rosado
+            : 'SHOW UP CONFIDENTLY'
+          );
+          ?></h2>
       </div>
 
       <a href="#" class="seccion-campania__flecha" aria-label="Siguiente">
@@ -192,25 +209,37 @@
 
 
     <div class="seccion-campania__imagen-completa seccion-campania__slider">
-
+   <?php
+      $campania_slide_1 = get_field('campania_slide_1', get_option('page_on_front'));
+      ?>
       <div class="seccion-campania__slide activo">
+        
         <img
-          class=""
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/img-campaña.png"
-          alt="Campaña 1">
+          src="<?php echo esc_url($campania_slide_1 ? $campania_slide_1['url'] : get_template_directory_uri() . '/assets/img/img-campaña.png'); ?>"
+          alt="Campaña 1"
+        >
       </div>
+
+        <?php
+      $campania_slide_2 = get_field('campania_slide_2', get_option('page_on_front'));
+      ?>
 
       <div class="seccion-campania__slide">
         <img
           class="imagen-ajustada2"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-2.png"
-          alt="Campaña 2">
-      </div>
+          src="<?php echo esc_url($campania_slide_2 ? $campania_slide_2['url'] : get_template_directory_uri() . '/assets/img/campania-2.png'); ?>"
+          alt="Campaña 2"
+        >
 
+      </div>
+     <?php
+      $campania_slide_3 = get_field('campania_slide_3', get_option('page_on_front'));
+      ?>
       <div class="seccion-campania__slide">
-        <img
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-3.png"
-          alt="Campaña 3">
+          <img
+          src="<?php echo esc_url($campania_slide_3 ? $campania_slide_3['url'] : get_template_directory_uri() . '/assets/img/campania-3.png'); ?>"
+          alt="Campaña 3"
+        >
       </div>
 
 
