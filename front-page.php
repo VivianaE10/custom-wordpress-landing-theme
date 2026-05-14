@@ -428,57 +428,112 @@
   <div class="seccion-with__contenedor">
 
     <div class="seccion-with__decoracion">
+      <?php
+      $imagen_with = get_field('imagen_with', get_option('page_on_front'));
+      $imagen_you = get_field('imagen_you', get_option('page_on_front'));
+      ?> 
+    
       <img
         class="seccion-with__letra seccion-with__letra--with"
-        src="<?php echo get_template_directory_uri(); ?>/assets/img/WITH.png"
-        alt="WITH">
-
+         src="<?php echo esc_url($imagen_with ? $imagen_with['url'] : get_template_directory_uri() . '/assets/img/WITH.png'); ?>"
+        alt="<?php echo esc_attr($imagen_with ? $imagen_with['alt'] : 'WITH'); ?>"
+        >
       <img
         class="seccion-with__letra seccion-with__letra--you"
-        src="<?php echo get_template_directory_uri(); ?>/assets/img/YOU.png"
-        alt="YOU">
+        src="<?php echo esc_url($imagen_you ? $imagen_you['url'] : get_template_directory_uri() . '/assets/img/YOU.png'); ?>"
+        alt="<?php echo esc_attr($imagen_you ? $imagen_you['alt'] : 'YOU'); ?>"
+      >
     </div>
+
     <div class="seccion-with__contenido">
       <h2 class="seccion-with__titulo">
-        WITH YOU EVERY MILE
+        <?php
+         $with_titulo = get_field('with_titulo', get_option('page_on_front'));
+         echo esc_html($with_titulo ? $with_titulo : 'WITH YOU EVERY MILE');
+        ?>
       </h2>
 
       <p class="seccion-with__texto">
-        Some firms don’t “do” at all. Others “do” it if you, negating<br>
-        the benefit of your team’s learning and improving.<br>
-        We’re in it with you every step of the way to ensure you<br>
-        became the best possible version of yourself.
+        <?php
+         $with_texto = get_field('with_texto', get_option('page_on_front'));
+            echo nl2br(esc_html($with_texto? $with_texto:
+            "Some firms don’t “do” at all. Others “do” it if you, negating
+            the benefit of your team’s learning and improving
+            We’re in it with you every step of the way to ensure you
+            became the best possible version of yourself."
+            )
+          );
+        ?>
       </p>
     </div>
+
     <div class="seccion-with__timeline">
 
       <div class="seccion-timeline">
         <h3 class="timeline-item__titulo">
-          ADVISORY FIRMS
+           <?php
+             $comparacion_1_titulo = get_field('comparacion_1_titulo', get_option('page_on_front'));
+             echo esc_html($comparacion_1_titulo ? $comparacion_1_titulo : 'ADVISORY FIRMS');
+           ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
-          <span class="color-sapote">Don’t</span> do
+           <span class="color-sapote">
+             <?php
+               $comparacion_1_resaltado = get_field('comparacion_1_resaltado', get_option('page_on_front'));
+                echo esc_html($comparacion_1_resaltado ? $comparacion_1_resaltado : "Don’t");
+             ?>
+           </span>
+
+          <?php
+            $comparacion_1_texto = get_field('comparacion_1_texto', get_option('page_on_front'));
+            echo esc_html($comparacion_1_texto ? $comparacion_1_texto : 'do');
+          ?>
         </p>
       </div>
 
       <div class="timeline-item">
         <h3 class="timeline-item__titulo">
-          AGENCIES
+          <?php
+           $comparacion_2_titulo = get_field('comparacion_2_titulo', get_option('page_on_front'));
+           echo esc_html($comparacion_2_titulo ? $comparacion_2_titulo : 'AGENCIES');
+          ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
-          <span class="color-sapote">For</span> you
+          <span class="color-sapote">
+              <?php
+               $comparacion_2_resaltado = get_field('comparacion_2_resaltado', get_option('page_on_front'));
+               echo esc_html($comparacion_2_resaltado ? $comparacion_2_resaltado : 'For');
+              ?>
+          </span>
+
+          <?php
+            $comparacion_2_texto = get_field('comparacion_2_texto', get_option('page_on_front'));
+            echo esc_html($comparacion_2_texto ? $comparacion_2_texto : 'you');
+          ?>
         </p>
       </div>
 
       <div class="timeline-item">
         <h3 class="timeline-item__titulo timeline-item__titulo-mixto">
-          JUMPSEAT
+          <?php
+           $comparacion_3_titulo = get_field('comparacion_3_titulo', get_option('page_on_front'));
+           echo esc_html($comparacion_3_titulo ? $comparacion_3_titulo : 'JUMPSEAT');
+          ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
-          <span class="color-mixto">With</span> you
+          <span class="color-mixto">
+            <?php
+             $comparacion_3_resaltado = get_field('comparacion_3_resaltado', get_option('page_on_front'));
+             echo esc_html($comparacion_3_resaltado ? $comparacion_3_resaltado : 'With');
+            ?>
+          </span>
+          <?php
+           $comparacion_3_texto = get_field('comparacion_3_texto', get_option('page_on_front'));
+           echo esc_html($comparacion_3_texto ? $comparacion_3_texto : 'you');
+          ?>
         </p>
       </div>
 
