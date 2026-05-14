@@ -2,82 +2,103 @@
 
 <div class="contenedor-principal">
 
-    <section class="hero">
+  <section class="hero">
 
-        <div class="overlay-hero"></div>
+    <div class="overlay-hero"></div>
 
-        <img
-            class="nube-izquierda mover-nube"
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-izquierda.png"
-            alt="nube izquierda"
-        >
+    <img
+      class="nube-izquierda mover-nube"
+      src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-izquierda.png"
+      alt="nube izquierda">
 
-        <img
-            class="nube-derecha mover-nube"
-            src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-derecha.png"
-            alt="nube derecha"
-        >
+    <img
+      class="nube-derecha mover-nube"
+      src="<?php echo get_template_directory_uri(); ?>/assets/img/nube-derecha.png"
+      alt="nube derecha">
 
-        <div class="contenido-hero">
+    <div class="contenido-hero">
 
-            <img
-                class="imagen-takeoff"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/take-off.png"
-                alt="take off"
-            >
-        </div>
+      <?php
+      $hero_image = get_field('hero_image', get_option('page_on_front'));
+      ?>
 
-    </section>
+      <img
+        class="imagen-takeoff"
+        src="<?php echo esc_url($hero_image ? $hero_image['url'] : get_template_directory_uri() . '/assets/img/take-off.png'); ?>"
+        alt="take off">
+    </div>
 
-    <section class="seccion-b2b">
+  </section>
 
-        <div class="intro-b2b">
+  <section class="seccion-b2b">
 
-            <p class="descripcion-hero">
-                Avoid turbulence. Arrive at your destination sooner. And enjoy the ascent
-            </p>
+    <div class="intro-b2b">
 
-            <img
-                class="boton"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/boton1.png"
-                alt="boton"
-            >
+      <p class="descripcion-hero">
+        <?php
+        $descripcion_hero = get_field('descripcion_hero', get_option('page_on_front'));
+        echo esc_html($descripcion_hero ? $descripcion_hero : 'Avoid turbulence. Arrive at your destination sooner. And enjoy the ascent');
+        ?>
+      </p>
 
-        </div>
 
-        <div class="contenido-b2b">
+      <?php
+      $boton_hero = get_field('boton_hero', get_option('page_on_front'));
+      ?>
 
-            <h2 class="titulo-b2b">
-                B2B SUCCESS IS IN THE AIR
-            </h2>
+      <img
+        class="boton"
+        src="<?php echo esc_url($boton_hero ? $boton_hero['url'] : get_template_directory_uri() . '/assets/img/boton1.png'); ?>"
+        alt="boton">
 
-            <p class="texto-b2b">
-                JumpSeat exists for the sole purpose to help you create momentum.
-            </p>
+    </div>
 
-            <p class="texto-b2b">
-                Momentum is the unmistakable energy on a winning B2B revenue team. It gives everyone the confidence to push themselves further, faster and to greater heights.
-            </p>
+    <div class="contenido-b2b">
 
-            <img
-                class="boton-b2b"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/boton1.png"
-                alt="boton"
-            >
+      <h2 class="titulo-b2b">
+        <?php
+        $titulo_b2b = get_field('titulo_b2b', get_option('page_on_front'));
+        echo esc_html($titulo_b2b ? $titulo_b2b : 'B2B SUCCESS IS IN THE AIR');
+        ?>
+      </h2>
 
-        </div>
+      <p class="texto-b2b">
+        JumpSeat exists for the sole purpose to help you create momentum.
+      </p>
 
-        <div class="airplane-section">
+      <p class="texto-b2b">
+        <?php
+        $texto_b2b_2 = get_field('texto_b2b_2', get_option('page_on_front'));
+        echo esc_html($texto_b2b_2 ? $texto_b2b_2 : 'Momentum is the unmistakable energy on a winning B2B revenue team. It gives everyone the confidence to push themselves further, faster and to greater heights.');
+        ?>
+      </p>
 
-            <img
-                class="airplane-board"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/airplane.png"
-                alt="airplane board"
-            >
+      <?php
+      $boton_b2b = get_field('boton_b2b', get_option('page_on_front'));
+      ?>
 
-        </div>
-     
-    </section>
+      <img
+        class="boton-b2b"
+        src="<?php echo esc_url($boton_b2b ? $boton_b2b['url'] : get_template_directory_uri() . '/assets/img/boton1.png'); ?>"
+        alt="boton">
+
+    </div>
+
+    <div class="airplane-section">
+
+      <?php
+      $imagen_airplane = get_field('imagen_airplane', get_option('page_on_front'));
+      ?>
+
+      <img
+        class="airplane-board"
+        src="<?php echo esc_url($imagen_airplane ? $imagen_airplane['url'] : get_template_directory_uri() . '/assets/img/airplane.png'); ?>"
+        alt="airplane board">
+
+      ?>
+    </div>
+
+  </section>
 </div>
 
 <!-- ----------------------------------------------------------------------------------seccion 3  -->
@@ -86,25 +107,24 @@
     <img
       class="logo-testimonio"
       src="<?php echo get_template_directory_uri(); ?>/assets/img/isco.png"
-      alt="ISCO"
-    >
+      alt="ISCO">
 
     <div class="contenido-testimonio">
       <span class="comillas">“</span>
       <h2 class="texto-testimonio">
-         <h2 class="texto-testimonio">
-         <span>We’re really impressed with their</span>
-         <span>expertise in B2B – in our opinion, there’s</span>
-         <span class="resaltado">no one close to their level<span>
-      </h2>
+        <h2 class="texto-testimonio">
+          <span>We’re really impressed with their</span>
+          <span>expertise in B2B – in our opinion, there’s</span>
+          <span class="resaltado">no one close to their level<span>
+        </h2>
     </div>s
 
-   <div class="autor-testimonio">
-    <div>
+    <div class="autor-testimonio">
+      <div>
         <h3>Joe Doe</h3>
         <p>CEO, ISCO Industry</p>
+      </div>
     </div>
-   </div>
 </section>
 
 <!-- ------------------------------------------------------------------------------Sección 4 -->
@@ -125,33 +145,30 @@
       </a>
     </div>
 
-   
+
     <div class="seccion-campania__imagen-completa seccion-campania__slider">
 
       <div class="seccion-campania__slide activo">
         <img
-        class=""
+          class=""
           src="<?php echo get_template_directory_uri(); ?>/assets/img/img-campaña.png"
-          alt="Campaña 1"
-        >
+          alt="Campaña 1">
       </div>
 
       <div class="seccion-campania__slide">
         <img
           class="imagen-ajustada2"
           src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-2.png"
-          alt="Campaña 2"
-        >
+          alt="Campaña 2">
       </div>
 
       <div class="seccion-campania__slide">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/img/campania-3.png"
-          alt="Campaña 3"
-        >
+          alt="Campaña 3">
       </div>
 
-     
+
 
     </div>
 
@@ -171,10 +188,10 @@
 
     <div class="seccion-servicios__hero">
       <img
+
         class="seccion-servicios__bgtext mover-texto-scroll "
         src="<?php echo get_template_directory_uri(); ?>/assets/img/ency.png"
-        alt="ENCY & ADVISORY"
-      >
+        alt="ENCY & ADVISORY">
     </div>
 
     <div class="seccion-servicios__contenido">
@@ -236,9 +253,9 @@
                 </svg>
               </button>
             </div>
-               <p class="servicio-card__descripcion">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               </p>
+            <p class="servicio-card__descripcion">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </article>
 
           <article class="servicio-card">
@@ -257,9 +274,9 @@
                 </svg>
               </button>
             </div>
-               <p class="servicio-card__descripcion">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                 </p>
+            <p class="servicio-card__descripcion">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </article>
 
           <article class="servicio-card">
@@ -267,7 +284,7 @@
               <h3 class="servicio-card__titulo">
                 RECRUITMENT,<br>
                 ONBOARDING<br>
-                AND 
+                AND
                 COACHING
               </h3>
 
@@ -278,9 +295,9 @@
                 </svg>
               </button>
             </div>
-               <p class="servicio-card__descripcion">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               </p>
+            <p class="servicio-card__descripcion">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </article>
 
         </div>
@@ -298,66 +315,64 @@
       <img
         class="seccion-with__letra seccion-with__letra--with"
         src="<?php echo get_template_directory_uri(); ?>/assets/img/WITH.png"
-        alt="WITH"
-      >
+        alt="WITH">
 
       <img
         class="seccion-with__letra seccion-with__letra--you"
         src="<?php echo get_template_directory_uri(); ?>/assets/img/YOU.png"
-        alt="YOU"
-      >
+        alt="YOU">
     </div>
     <div class="seccion-with__contenido">
-    <h2 class="seccion-with__titulo">
-      WITH YOU EVERY MILE
-    </h2>
+      <h2 class="seccion-with__titulo">
+        WITH YOU EVERY MILE
+      </h2>
 
-    <p class="seccion-with__texto">
-     Some firms don’t “do” at all. Others “do” it if you, negating<br>
-     the benefit of your team’s learning and improving.<br> 
-     We’re in it with you every step of the way to ensure you<br> 
-     became the best possible version of yourself.
-    </p>
-    </div> 
+      <p class="seccion-with__texto">
+        Some firms don’t “do” at all. Others “do” it if you, negating<br>
+        the benefit of your team’s learning and improving.<br>
+        We’re in it with you every step of the way to ensure you<br>
+        became the best possible version of yourself.
+      </p>
+    </div>
     <div class="seccion-with__timeline">
 
-  <div class="seccion-timeline">
-    <h3 class="timeline-item__titulo">
-      ADVISORY FIRMS
-    </h3>
+      <div class="seccion-timeline">
+        <h3 class="timeline-item__titulo">
+          ADVISORY FIRMS
+        </h3>
 
-    <p class="timeline-item__subtitulo">
-      <span class="color-sapote">Don’t</span> do
-    </p>
-  </div>
+        <p class="timeline-item__subtitulo">
+          <span class="color-sapote">Don’t</span> do
+        </p>
+      </div>
 
-  <div class="timeline-item">
-    <h3 class="timeline-item__titulo">
-      AGENCIES
-    </h3>
+      <div class="timeline-item">
+        <h3 class="timeline-item__titulo">
+          AGENCIES
+        </h3>
 
-    <p class="timeline-item__subtitulo">
-      <span class="color-sapote">For</span> you
-    </p>
-  </div>
+        <p class="timeline-item__subtitulo">
+          <span class="color-sapote">For</span> you
+        </p>
+      </div>
 
-  <div class="timeline-item">
-    <h3 class="timeline-item__titulo timeline-item__titulo-mixto">
-        JUMPSEAT
-    </h3>
+      <div class="timeline-item">
+        <h3 class="timeline-item__titulo timeline-item__titulo-mixto">
+          JUMPSEAT
+        </h3>
 
-    <p class="timeline-item__subtitulo">
-      <span class="color-mixto">With</span> you
-    </p>
-  </div>
+        <p class="timeline-item__subtitulo">
+          <span class="color-mixto">With</span> you
+        </p>
+      </div>
 
-  <div class="timeline-linea">
-    <span class="timeline-punto"></span>
-    <span class="timeline-punto"></span>
-    <span class="timeline-punto"></span>
-  </div>
+      <div class="timeline-linea">
+        <span class="timeline-punto"></span>
+        <span class="timeline-punto"></span>
+        <span class="timeline-punto"></span>
+      </div>
 
-</div>
+    </div>
 
   </div>
 </section>
@@ -393,26 +408,24 @@
       <a href="#" class="seccion-sales__boton" aria-label="Get to know us">
         <img
           src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-sale.png"
-          alt="Get to know us"
-        >
+          alt="Get to know us">
       </a>
 
     </div>
   </div>
 </section>
 <!-- -------------------------------------------------------------------seccion 8 -->
-  <section class="seccion-start">
+<section class="seccion-start">
   <div class="seccion-start__bg">
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/img/start-here.png"
       alt="Start Here"
-      class="seccion-start__bgimg mover-texto-scroll"
-    >
+      class="seccion-start__bgimg mover-texto-scroll">
   </div>
   <div class="seccion-start__contenido">
-  <h2 class="seccion-start__titulo">FEELING LOST?</h2>
-  <p class="seccion-start__subtitulo">START HERE.</p>
-</div>
+    <h2 class="seccion-start__titulo">FEELING LOST?</h2>
+    <p class="seccion-start__subtitulo">START HERE.</p>
+  </div>
 </section>
 <!-- 
 -------------------------------------------------------------------------------- -->
@@ -420,18 +433,17 @@
   <div class="seccion-start__imagen">
     <img
       src="<?php echo get_template_directory_uri(); ?>/assets/img/img-avion.jpg"
-      alt="Airplane"
-    >
+      alt="Airplane">
   </div>
   <div class="seccion-start__info">
     <h3 class="seccion-start__cardtitulo">
-      Ideal client profiles and the <br> 
+      Ideal client profiles and the <br>
       JumpSeat $5,000 FedEx rule.
     </h3>
 
     <p class="seccion-start__descripcion">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod<br> 
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod<br>
       tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br>
       labore et dolore magna aliqua.
     </p>
@@ -439,8 +451,7 @@
     <a href="#" class="seccion-start__boton">
       <img
         src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-start.png"
-        alt="Start Here"
-      >
+        alt="Start Here">
     </a>
 
   </div>
@@ -449,73 +460,73 @@
 <section class="seccion-formulario">
   <div class="seccion-formulario__contenedor">
     <div class="seccion-formulario__tarjeta">
-       <div class="formulario__encabezado">
-  <h2 class="formulario__titulo">
-    GET IN TOUCH WITH <span>OUR TEAM</span>
-  </h2>
-</div>
+      <div class="formulario__encabezado">
+        <h2 class="formulario__titulo">
+          GET IN TOUCH WITH <span>OUR TEAM</span>
+        </h2>
+      </div>
 
-<div class="formulario__fila">
-  <div class="formulario__campo">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
-  </div>
+      <div class="formulario__fila">
+        <div class="formulario__campo">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+        </div>
 
-  <div class="formulario__campo">
-    <label for="last-name">Last Name</label>
-    <input type="text" id="last-name" name="last-name">
-  </div>
-</div>
+        <div class="formulario__campo">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name">
+        </div>
+      </div>
 
-<div class="formulario__campo formulario__campo--full">
-  <label for="title">Tittle</label>
-  <input type="text" id="title" name="title">
-</div>
+      <div class="formulario__campo formulario__campo--full">
+        <label for="title">Tittle</label>
+        <input type="text" id="title" name="title">
+      </div>
 
-<div class="formulario__campo formulario__campo--full">
-  <label for="company">Company</label>
-  <input type="text" id="company" name="company">
-</div>
+      <div class="formulario__campo formulario__campo--full">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company">
+      </div>
 
-<div class="formulario__mensaje">
-  <label for="message">Message</label>
-  <textarea id="message" name="message"></textarea>
-</div>
+      <div class="formulario__mensaje">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
 
-<a href="#" class="formulario__send">
-  <span>SEND</span>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M5 12h14"></path>
-    <path d="M13 6l6 6-6 6"></path>
-  </svg>
-</a>
+      <a href="#" class="formulario__send">
+        <span>SEND</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M13 6l6 6-6 6"></path>
+        </svg>
+      </a>
 
-<div class="tarjeta-contacto">
-  <div class="tarjeta-contacto__raya"></div>
+      <div class="tarjeta-contacto">
+        <div class="tarjeta-contacto__raya"></div>
 
-  <div class="tarjeta-contacto__contenido">
-    <div class="tarjeta-contacto__imagen">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dan-persona.png" alt="CEO">
+        <div class="tarjeta-contacto__contenido">
+          <div class="tarjeta-contacto__imagen">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dan-persona.png" alt="CEO">
+          </div>
+
+          <div class="tarjeta-contacto__info">
+            <p class="tarjeta-contacto__texto">
+              Email our CEO directly,
+              <span class="correo">dan@domain.co</span> or<br>
+              drop a line to our team.
+            </p>
+
+            <p class="tarjeta-contacto__frase">
+              <span class="frase-azul">PILOTS</span>
+              <span class="frase-mezcla-1">PREVIOUSLY.</span>
+              <span class="frase-mezcla-2">TAKEOF</span>
+              <span class="frase-salmon">TODAY.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div class="tarjeta-contacto__info">
-      <p class="tarjeta-contacto__texto">
-        Email our CEO directly,
-        <span class="correo">dan@domain.co</span> or<br>
-        drop a line to our team.
-      </p>
-
-      <p class="tarjeta-contacto__frase">
-        <span class="frase-azul">PILOTS</span>
-        <span class="frase-mezcla-1">PREVIOUSLY.</span>
-        <span class="frase-mezcla-2">TAKEOF</span>
-        <span class="frase-salmon">TODAY.</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </div>
 </section>
 
 <?php get_footer(); ?>
