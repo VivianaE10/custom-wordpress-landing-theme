@@ -946,7 +946,7 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.7rem;
   line-height: 1.75;
-  font-weight: 400;
+  font-weight: 300;
   margin-left: 2rem;
 }
 
@@ -1007,7 +1007,7 @@ body {
 
 .seccion-start__contenido {
   position: absolute;
-  left: 17rem;
+  left: 18rem;
   top: 71%;
   transform: translateY(-50%);
   z-index: 3;

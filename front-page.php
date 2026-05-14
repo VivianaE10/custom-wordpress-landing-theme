@@ -612,21 +612,36 @@
     </div>
   </div>
 </section>
-<!-- -------------------------------------------------------------------seccion 8 -->
+
+<!-- -------------------------------START---------------------------------------------------seccion 8 -->
+
 <section class="seccion-start">
   <div class="seccion-start__bg">
+    <?php
+     $imagen_fondo_inicio = get_field('imagen_fondo_inicio', get_option('page_on_front'));
+    ?>
     <img
-      src="<?php echo get_template_directory_uri(); ?>/assets/img/start-here.png"
-      alt="Start Here"
+      src="<?php echo esc_url($imagen_fondo_inicio ? $imagen_fondo_inicio['url'] : get_template_directory_uri() . '/assets/img/start-here.png'); ?>"
+      alt="<?php echo esc_attr($imagen_fondo_inicio ? $imagen_fondo_inicio['alt'] : 'Start Here'); ?>"
       class="seccion-start__bgimg mover-texto-scroll">
   </div>
   <div class="seccion-start__contenido">
-    <h2 class="seccion-start__titulo">FEELING LOST?</h2>
-    <p class="seccion-start__subtitulo">START HERE.</p>
+    <h2 class="seccion-start__titulo">
+      <?php
+       $titulo_inicio = get_field('titulo_inicio', get_option('page_on_front'));
+       echo esc_html($titulo_inicio ? $titulo_inicio : 'FEELING LOST?');
+      ?>
+    </h2>
+    <p class="seccion-start__subtitulo">
+      <?php
+       $subtitulo_inicio = get_field('subtitulo_inicio', get_option('page_on_front'));
+       echo esc_html($subtitulo_inicio ? $subtitulo_inicio : 'START HERE.');
+      ?>
+    </p>
   </div>
 </section>
 <!-- 
--------------------------------------------------------------------------------- -->
+----------------------------------------------------------------------------------->
 <div class="seccion-start__card">
   <div class="seccion-start__imagen">
     <img
@@ -651,7 +666,6 @@
         src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-start.png"
         alt="Start Here">
     </a>
-
   </div>
 </div>
 <!-- ----------------------------------------------------------seccion formulario  -->

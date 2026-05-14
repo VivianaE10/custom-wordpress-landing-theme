@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scroll = window.scrollY;
 
     textos.forEach((texto, index) => {
-      const velocidad = 0.002;
+      const velocidad = 0.003;
 
       const moverX = Math.sin(scroll * velocidad) * 40;
 
