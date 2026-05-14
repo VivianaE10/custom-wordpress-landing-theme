@@ -276,20 +276,22 @@
 
       <div class="seccion-servicios__bloque">
         <div class="seccion-servicios__texto">
-          <p> 
+          <p>
             <?php
-              $texto_intro_servicios = get_field('texto_intro_servicios', get_option('page_on_front'));
-               echo nl2br(esc_html( $texto_intro_servicios? $texto_intro_servicios :
-                    "If a management consultancy
+            $texto_intro_servicios = get_field('texto_intro_servicios', get_option('page_on_front'));
+            echo nl2br(
+              esc_html(
+                $texto_intro_servicios ? $texto_intro_servicios :
+                  "If a management consultancy
                     and indie agency came
                     together, JumpSeat would be
                     the result. We’re unique blend
                     of left and right brain thinking.
                     Strategy and creativity. Deep
                     thinking and get it done."
-                )
-              );
-              ?>
+              )
+            );
+            ?>
           </p>
         </div>
 
@@ -299,15 +301,17 @@
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
                 <?php
-                  $card_1_titulo = get_field('card_1_titulo', get_option('page_on_front')); 
-                   echo nl2br(esc_html($card_1_titulo? $card_1_titulo:
-                   "STRATEGIC
+                $card_1_titulo = get_field('card_1_titulo', get_option('page_on_front'));
+                echo nl2br(
+                  esc_html(
+                    $card_1_titulo ? $card_1_titulo :
+                      "STRATEGIC
                     REVENUE
                     GENERATION
                     ADVISORY"
-                   )
-                  );
-               ?>           
+                  )
+                );
+                ?>
               </h3>
 
               <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
@@ -329,12 +333,14 @@
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
                 <?php
-                  $card_2_titulo = get_field('card_2_titulo', get_option('page_on_front'));
-                   echo nl2br(esc_html($card_2_titulo ? $card_2_titulo :
-                    "BRAND
+                $card_2_titulo = get_field('card_2_titulo', get_option('page_on_front'));
+                echo nl2br(
+                  esc_html(
+                    $card_2_titulo ? $card_2_titulo :
+                      "BRAND
                      DEVELOPMENT"
-                    )
-                  );
+                  )
+                );
                 ?>
               </h3>
 
@@ -347,8 +353,8 @@
             </div>
             <p class="servicio-card__descripcion">
               <?php
-               $card_2_descripcion = get_field('card_2_descripcion', get_option('page_on_front'));
-               echo esc_html($card_2_descripcion ? $card_2_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+              $card_2_descripcion = get_field('card_2_descripcion', get_option('page_on_front'));
+              echo esc_html($card_2_descripcion ? $card_2_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
               ?>
             </p>
           </article>
@@ -357,16 +363,18 @@
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
                 <?php
-                  $card_3_titulo = get_field('card_3_titulo', get_option('page_on_front'));
-                   echo nl2br( esc_html($card_3_titulo ? $card_3_titulo :
-                    "DEMAND 
+                $card_3_titulo = get_field('card_3_titulo', get_option('page_on_front'));
+                echo nl2br(
+                  esc_html(
+                    $card_3_titulo ? $card_3_titulo :
+                      "DEMAND 
                      GEN
                      CAMPAIGN
                      STRATEGY 
                      AND
                      EXECUTION"
-                     )
-                  );
+                  )
+                );
                 ?>
               </h3>
 
@@ -379,9 +387,10 @@
             </div>
             <p class="servicio-card__descripcion">
               <?php
-                $card_3_descripcion = get_field('card_3_descripcion', get_option('page_on_front'));
-                 echo esc_html($card_3_descripcion ? $card_3_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                );
+              $card_3_descripcion = get_field('card_3_descripcion', get_option('page_on_front'));
+              echo esc_html(
+                $card_3_descripcion ? $card_3_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              );
               ?>
             </p>
           </article>
@@ -390,14 +399,16 @@
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
                 <?php
-                  $card_4_titulo = get_field('card_4_titulo', get_option('page_on_front'));
-                   echo nl2br(esc_html($card_4_titulo ? $card_4_titulo :
-                     "RECRUITMENT,<br>
+                $card_4_titulo = get_field('card_4_titulo', get_option('page_on_front'));
+                echo nl2br(
+                  esc_html(
+                    $card_4_titulo ? $card_4_titulo :
+                      "RECRUITMENT,<br>
                       ONBOARDING<br>
                       AND<br>
                       COACHING"
-                    )
-                 );
+                  )
+                );
                 ?>
               </h3>
 
@@ -410,9 +421,10 @@
             </div>
             <p class="servicio-card__descripcion">
               <?php
-                $card_4_descripcion = get_field('card_4_descripcion', get_option('page_on_front'));
-                  echo esc_html($card_4_descripcion ? $card_4_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                );
+              $card_4_descripcion = get_field('card_4_descripcion', get_option('page_on_front'));
+              echo esc_html(
+                $card_4_descripcion ? $card_4_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+              );
               ?>
             </p>
             </p>
@@ -432,38 +444,38 @@
       <?php
       $imagen_with = get_field('imagen_with', get_option('page_on_front'));
       $imagen_you = get_field('imagen_you', get_option('page_on_front'));
-      ?> 
-    
+      ?>
+
       <img
         class="seccion-with__letra seccion-with__letra--with"
-         src="<?php echo esc_url($imagen_with ? $imagen_with['url'] : get_template_directory_uri() . '/assets/img/WITH.png'); ?>"
-        alt="<?php echo esc_attr($imagen_with ? $imagen_with['alt'] : 'WITH'); ?>"
-        >
+        src="<?php echo esc_url($imagen_with ? $imagen_with['url'] : get_template_directory_uri() . '/assets/img/WITH.png'); ?>"
+        alt="<?php echo esc_attr($imagen_with ? $imagen_with['alt'] : 'WITH'); ?>">
       <img
         class="seccion-with__letra seccion-with__letra--you"
         src="<?php echo esc_url($imagen_you ? $imagen_you['url'] : get_template_directory_uri() . '/assets/img/YOU.png'); ?>"
-        alt="<?php echo esc_attr($imagen_you ? $imagen_you['alt'] : 'YOU'); ?>"
-      >
+        alt="<?php echo esc_attr($imagen_you ? $imagen_you['alt'] : 'YOU'); ?>">
     </div>
 
     <div class="seccion-with__contenido">
       <h2 class="seccion-with__titulo">
         <?php
-         $with_titulo = get_field('with_titulo', get_option('page_on_front'));
-         echo esc_html($with_titulo ? $with_titulo : 'WITH YOU EVERY MILE');
+        $with_titulo = get_field('with_titulo', get_option('page_on_front'));
+        echo esc_html($with_titulo ? $with_titulo : 'WITH YOU EVERY MILE');
         ?>
       </h2>
 
       <p class="seccion-with__texto">
         <?php
-         $with_texto = get_field('with_texto', get_option('page_on_front'));
-            echo nl2br(esc_html($with_texto? $with_texto:
-            "Some firms don’t “do” at all. Others “do” it if you, negating
+        $with_texto = get_field('with_texto', get_option('page_on_front'));
+        echo nl2br(
+          esc_html(
+            $with_texto ? $with_texto :
+              "Some firms don’t “do” at all. Others “do” it if you, negating
             the benefit of your team’s learning and improving
             We’re in it with you every step of the way to ensure you
             became the best possible version of yourself."
-            )
-          );
+          )
+        );
         ?>
       </p>
     </div>
@@ -472,23 +484,23 @@
 
       <div class="seccion-timeline">
         <h3 class="timeline-item__titulo">
-           <?php
-             $comparacion_1_titulo = get_field('comparacion_1_titulo', get_option('page_on_front'));
-             echo esc_html($comparacion_1_titulo ? $comparacion_1_titulo : 'ADVISORY FIRMS');
-           ?>
+          <?php
+          $comparacion_1_titulo = get_field('comparacion_1_titulo', get_option('page_on_front'));
+          echo esc_html($comparacion_1_titulo ? $comparacion_1_titulo : 'ADVISORY FIRMS');
+          ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
-           <span class="color-sapote">
-             <?php
-               $comparacion_1_resaltado = get_field('comparacion_1_resaltado', get_option('page_on_front'));
-                echo esc_html($comparacion_1_resaltado ? $comparacion_1_resaltado : "Don’t");
-             ?>
-           </span>
+          <span class="color-sapote">
+            <?php
+            $comparacion_1_resaltado = get_field('comparacion_1_resaltado', get_option('page_on_front'));
+            echo esc_html($comparacion_1_resaltado ? $comparacion_1_resaltado : "Don’t");
+            ?>
+          </span>
 
           <?php
-            $comparacion_1_texto = get_field('comparacion_1_texto', get_option('page_on_front'));
-            echo esc_html($comparacion_1_texto ? $comparacion_1_texto : 'do');
+          $comparacion_1_texto = get_field('comparacion_1_texto', get_option('page_on_front'));
+          echo esc_html($comparacion_1_texto ? $comparacion_1_texto : 'do');
           ?>
         </p>
       </div>
@@ -496,22 +508,22 @@
       <div class="timeline-item">
         <h3 class="timeline-item__titulo">
           <?php
-           $comparacion_2_titulo = get_field('comparacion_2_titulo', get_option('page_on_front'));
-           echo esc_html($comparacion_2_titulo ? $comparacion_2_titulo : 'AGENCIES');
+          $comparacion_2_titulo = get_field('comparacion_2_titulo', get_option('page_on_front'));
+          echo esc_html($comparacion_2_titulo ? $comparacion_2_titulo : 'AGENCIES');
           ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
           <span class="color-sapote">
-              <?php
-               $comparacion_2_resaltado = get_field('comparacion_2_resaltado', get_option('page_on_front'));
-               echo esc_html($comparacion_2_resaltado ? $comparacion_2_resaltado : 'For');
-              ?>
+            <?php
+            $comparacion_2_resaltado = get_field('comparacion_2_resaltado', get_option('page_on_front'));
+            echo esc_html($comparacion_2_resaltado ? $comparacion_2_resaltado : 'For');
+            ?>
           </span>
 
           <?php
-            $comparacion_2_texto = get_field('comparacion_2_texto', get_option('page_on_front'));
-            echo esc_html($comparacion_2_texto ? $comparacion_2_texto : 'you');
+          $comparacion_2_texto = get_field('comparacion_2_texto', get_option('page_on_front'));
+          echo esc_html($comparacion_2_texto ? $comparacion_2_texto : 'you');
           ?>
         </p>
       </div>
@@ -519,21 +531,21 @@
       <div class="timeline-item">
         <h3 class="timeline-item__titulo timeline-item__titulo-mixto">
           <?php
-           $comparacion_3_titulo = get_field('comparacion_3_titulo', get_option('page_on_front'));
-           echo esc_html($comparacion_3_titulo ? $comparacion_3_titulo : 'JUMPSEAT');
+          $comparacion_3_titulo = get_field('comparacion_3_titulo', get_option('page_on_front'));
+          echo esc_html($comparacion_3_titulo ? $comparacion_3_titulo : 'JUMPSEAT');
           ?>
         </h3>
 
         <p class="timeline-item__subtitulo">
           <span class="color-mixto">
             <?php
-             $comparacion_3_resaltado = get_field('comparacion_3_resaltado', get_option('page_on_front'));
-             echo esc_html($comparacion_3_resaltado ? $comparacion_3_resaltado : 'With');
+            $comparacion_3_resaltado = get_field('comparacion_3_resaltado', get_option('page_on_front'));
+            echo esc_html($comparacion_3_resaltado ? $comparacion_3_resaltado : 'With');
             ?>
           </span>
           <?php
-           $comparacion_3_texto = get_field('comparacion_3_texto', get_option('page_on_front'));
-           echo esc_html($comparacion_3_texto ? $comparacion_3_texto : 'you');
+          $comparacion_3_texto = get_field('comparacion_3_texto', get_option('page_on_front'));
+          echo esc_html($comparacion_3_texto ? $comparacion_3_texto : 'you');
           ?>
         </p>
       </div>
@@ -554,60 +566,66 @@
     <div class="seccion-sales__contenido">
       <h2 class="seccion-sales__titulo">
         <?php
-         $titulo_ventas = get_field('titulo_ventas', get_option('page_on_front'));
-            echo nl2br(esc_html($titulo_ventas? $titulo_ventas:
-           "ELIMINATE RANDOM ACTS OF
+        $titulo_ventas = get_field('titulo_ventas', get_option('page_on_front'));
+        echo nl2br(
+          esc_html(
+            $titulo_ventas ? $titulo_ventas :
+              "ELIMINATE RANDOM ACTS OF
             SALES &amp; MARKETING FOREVER"
-            )
-          ); 
-        ?>   
+          )
+        );
+        ?>
       </h2>
 
       <p class="seccion-sales__intro">
-          <?php
-           $intro_ventas = get_field('intro_ventas', get_option('page_on_front'));
-           echo esc_html($intro_ventas? $intro_ventas:
-           "This is the hill we’re willing to die on."
-            );
-          ?>
+        <?php
+        $intro_ventas = get_field('intro_ventas', get_option('page_on_front'));
+        echo esc_html(
+          $intro_ventas ? $intro_ventas :
+            "This is the hill we’re willing to die on."
+        );
+        ?>
       </p>
 
       <div class="seccion-sales__texto">
         <p>
           <?php
-            $texto_ventas = get_field('texto_ventas', get_option('page_on_front'));
-             echo nl2br(esc_html($texto_ventas? $texto_ventas:
-              "We exist to stop all the random acts of content.
+          $texto_ventas = get_field('texto_ventas', get_option('page_on_front'));
+          echo nl2br(
+            esc_html(
+              $texto_ventas ? $texto_ventas :
+                "We exist to stop all the random acts of content.
                Half baked webinars an uninspired emails. One-
                off tweets and abandoned social channels.
                Leadership meetings that start with, “I just heard
                this on a podcast...”"
-             )
-            );
+            )
+          );
           ?>
         </p>
 
         <p>
           <?php
-            $texto_ventas_2 = get_field('texto_ventas_2', get_option('page_on_front'));
-              echo nl2br(esc_html($texto_ventas_2? $texto_ventas_2:
-              "You get in. RAofS&M produce chaos but not
+          $texto_ventas_2 = get_field('texto_ventas_2', get_option('page_on_front'));
+          echo nl2br(
+            esc_html(
+              $texto_ventas_2 ? $texto_ventas_2 :
+                "You get in. RAofS&M produce chaos but not
                consistent results."
-              )
-            );
+            )
+          );
           ?>
-       </p>
+        </p>
       </div>
-      
+
       <?php
       $boton_ventas = get_field('boton_ventas', get_option('page_on_front'));
       ?>
- 
+
       <a href="#" class="seccion-sales__boton" aria-label="Get to know us">
         <img
           src="<?php echo esc_url($boton_ventas ? $boton_ventas['url'] : get_template_directory_uri() . '/assets/img/botton-sale.png'); ?>"
-          alt="<?php echo esc_attr($boton_ventas ? $boton_ventas['alt'] : 'Get to know us'); ?>"
-        >
+          alt="<?php echo esc_attr($boton_ventas ? $boton_ventas['alt'] : 'Get to know us'); ?>">
       </a>
     </div>
   </div>
@@ -618,7 +636,7 @@
 <section class="seccion-start">
   <div class="seccion-start__bg">
     <?php
-     $imagen_fondo_inicio = get_field('imagen_fondo_inicio', get_option('page_on_front'));
+    $imagen_fondo_inicio = get_field('imagen_fondo_inicio', get_option('page_on_front'));
     ?>
     <img
       src="<?php echo esc_url($imagen_fondo_inicio ? $imagen_fondo_inicio['url'] : get_template_directory_uri() . '/assets/img/start-here.png'); ?>"
@@ -629,136 +647,230 @@
   <div class="seccion-start__contenido">
     <h2 class="seccion-start__titulo">
       <?php
-       $titulo_inicio = get_field('titulo_inicio', get_option('page_on_front'));
-       echo esc_html($titulo_inicio ? $titulo_inicio : 'FEELING LOST?');
+      $titulo_inicio = get_field('titulo_inicio', get_option('page_on_front'));
+      echo esc_html($titulo_inicio ? $titulo_inicio : 'FEELING LOST?');
       ?>
     </h2>
     <p class="seccion-start__subtitulo">
       <?php
-       $subtitulo_inicio = get_field('subtitulo_inicio', get_option('page_on_front'));
-       echo esc_html($subtitulo_inicio ? $subtitulo_inicio : 'START HERE.');
+      $subtitulo_inicio = get_field('subtitulo_inicio', get_option('page_on_front'));
+      echo esc_html($subtitulo_inicio ? $subtitulo_inicio : 'START HERE.');
       ?>
     </p>
   </div>
 </section>
-<!-- 
------------------------------------------------------------------------------------>
+
+<!-- ------------------------------START CARD-----------------------------------------------------> -->
 <div class="seccion-start__card">
   <div class="seccion-start__imagen">
     <?php
-      $imagen_card_inicio = get_field('imagen_card_inicio', get_option('page_on_front'));
+    $imagen_card_inicio = get_field('imagen_card_inicio', get_option('page_on_front'));
     ?>
     <img src="<?php echo esc_url($imagen_card_inicio ? $imagen_card_inicio['url'] : get_template_directory_uri() . '/assets/img/img-avion.jpg'); ?>"
-      alt="<?php echo esc_attr($imagen_card_inicio ? $imagen_card_inicio['alt'] : 'Airplane'); ?>"
-    >
+      alt="<?php echo esc_attr($imagen_card_inicio ? $imagen_card_inicio['alt'] : 'Airplane'); ?>">
   </div>
   <div class="seccion-start__info">
     <h3 class="seccion-start__cardtitulo">
       <?php
-        $titulo_card_inicio = get_field('titulo_card_inicio', get_option('page_on_front'));
-          echo nl2br( esc_html($titulo_card_inicio? $titulo_card_inicio:
-          "Ideal client profiles and the
+      $titulo_card_inicio = get_field('titulo_card_inicio', get_option('page_on_front'));
+      echo nl2br(
+        esc_html(
+          $titulo_card_inicio ? $titulo_card_inicio :
+            "Ideal client profiles and the
           JumpSeat $5,000 FedEx rule."
-          )
-        );
+        )
+      );
       ?>
     </h3>
 
     <p class="seccion-start__descripcion">
       <?php
-        $descripcion_card_inicio = get_field('descripcion_card_inicio', get_option('page_on_front'));
-         echo nl2br(esc_html($descripcion_card_inicio? $descripcion_card_inicio :
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      $descripcion_card_inicio = get_field('descripcion_card_inicio', get_option('page_on_front'));
+      echo nl2br(
+        esc_html(
+          $descripcion_card_inicio ? $descripcion_card_inicio :
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod
           tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua."
-          )
-        ); 
+        )
+      );
       ?>
     </p>
 
     <?php
-      $boton_card_inicio = get_field('boton_card_inicio', get_option('page_on_front'));
+    $boton_card_inicio = get_field('boton_card_inicio', get_option('page_on_front'));
     ?>
 
     <a href="#" class="seccion-start__boton">
       <img
         src="<?php echo esc_url($boton_card_inicio ? $boton_card_inicio['url'] : get_template_directory_uri() . '/assets/img/botton-start.png'); ?>"
-        alt="<?php echo esc_attr($boton_card_inicio ? $boton_card_inicio['alt'] : 'Start Here'); ?>"
-      >
+        alt="<?php echo esc_attr($boton_card_inicio ? $boton_card_inicio['alt'] : 'Start Here'); ?>">
     </a>
   </div>
 </div>
-<!-- ----------------------------------------------------------seccion formulario  -->
+
+<!-- ---------------------FORMULARIO----------------------------------------------------------------seccion formulario  -->
+
 <section class="seccion-formulario">
   <div class="seccion-formulario__contenedor">
     <div class="seccion-formulario__tarjeta">
       <div class="formulario__encabezado">
         <h2 class="formulario__titulo">
-          GET IN TOUCH WITH <span>OUR TEAM</span>
+          <?php
+          $titulo_formulario_1 = get_field('titulo_formulario_1', get_option('page_on_front'));
+          $titulo_formulario_2 = get_field('titulo_formulario_2', get_option('page_on_front'));
+          ?>
+
+          <?php echo esc_html($titulo_formulario_1 ? $titulo_formulario_1 : 'GET IN TOUCH WITH'); ?>
+          <span>
+            <?php echo esc_html($titulo_formulario_2 ? $titulo_formulario_2 : 'OUR TEAM'); ?>
+          </span>
         </h2>
       </div>
 
       <div class="formulario__fila">
         <div class="formulario__campo">
-          <label for="name">Name</label>
+          <label for="name">
+            <?php
+            $label_nombre = get_field('label_nombre', get_option('page_on_front'));
+            echo esc_html($label_nombre ? $label_nombre : 'Name');
+            ?>
+          </label>
           <input type="text" id="name" name="name">
         </div>
 
         <div class="formulario__campo">
-          <label for="last-name">Last Name</label>
+          <label for="last-name">
+            <?php
+            $label_apellido = get_field('label_apellido', get_option('page_on_front'));
+            echo esc_html($label_apellido ? $label_apellido : 'Last Name');
+            ?>
+          </label>
           <input type="text" id="last-name" name="last-name">
         </div>
       </div>
 
       <div class="formulario__campo formulario__campo--full">
-        <label for="title">Tittle</label>
+        <label for="title">
+          <?php
+          $label_titulo = get_field('label_titulo', get_option('page_on_front'));
+          echo esc_html($label_titulo ? $label_titulo : 'Title');
+          ?>
+        </label>
         <input type="text" id="title" name="title">
       </div>
 
       <div class="formulario__campo formulario__campo--full">
-        <label for="company">Company</label>
+        <label for="company">
+          <?php
+          $label_empresa = get_field('label_empresa', get_option('page_on_front'));
+          echo esc_html($label_empresa ? $label_empresa : 'Company');
+          ?>
+        </label>
         <input type="text" id="company" name="company">
       </div>
 
       <div class="formulario__mensaje">
-        <label for="message">Message</label>
+        <label for="message">
+          <?php
+          $label_mensaje = get_field('label_mensaje', get_option('page_on_front'));
+          echo esc_html($label_mensaje ? $label_mensaje : 'Message');
+          ?>
+        </label>
+        </label>
         <textarea id="message" name="message"></textarea>
       </div>
 
       <a href="#" class="formulario__send">
-        <span>SEND</span>
+        <span>
+          <?php
+          $texto_boton_enviar = get_field('texto_boton_enviar', get_option('page_on_front'));
+          echo esc_html($texto_boton_enviar ? $texto_boton_enviar : 'SEND');
+          ?>
+        </span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 12h14"></path>
           <path d="M13 6l6 6-6 6"></path>
         </svg>
       </a>
 
+      <!-- - -------------------------TARGETA CONTACTO -->
+
       <div class="tarjeta-contacto">
         <div class="tarjeta-contacto__raya"></div>
 
         <div class="tarjeta-contacto__contenido">
           <div class="tarjeta-contacto__imagen">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dan-persona.png" alt="CEO">
+            <?php
+            $imagen_contacto = get_field('imagen_contacto', get_option('page_on_front'));
+            ?>
+            <img
+              src="<?php echo esc_url($imagen_contacto ? $imagen_contacto['url'] : get_template_directory_uri() . '/assets/img/dan-persona.png'); ?>"
+              alt="<?php echo esc_attr($imagen_contacto ? $imagen_contacto['alt'] : 'CEO'); ?>">
           </div>
 
           <div class="tarjeta-contacto__info">
             <p class="tarjeta-contacto__texto">
-              Email our CEO directly,
-              <span class="correo">dan@domain.co</span> or<br>
-              drop a line to our team.
+              <?php
+              $texto_contacto_1 = get_field('texto_contacto_1', get_option('page_on_front'));
+              echo esc_html($texto_contacto_1 ? $texto_contacto_1 : 'Email our CEO directly,');
+              ?>
+
+              <span class="correo">
+                <?php
+                $correo_contacto = get_field('correo_contacto', get_option('page_on_front'));
+                echo esc_html($correo_contacto ? $correo_contacto : 'dan@domain.co');
+                ?>
+              </span>
+              or<br>
+              <?php
+              $texto_contacto_2 = get_field('texto_contacto_2', get_option('page_on_front'));
+              echo esc_html($texto_contacto_2 ? $texto_contacto_2 : 'drop a line to our team.');
+              ?>
             </p>
 
             <p class="tarjeta-contacto__frase">
-              <span class="frase-azul">PILOTS</span>
-              <span class="frase-mezcla-1">PREVIOUSLY.</span>
-              <span class="frase-mezcla-2">TAKEOF</span>
-              <span class="frase-salmon">TODAY.</span>
+              <span class="frase-azul">
+                <?php
+                $frase_1 = get_field('frase_1', get_option('page_on_front'));
+                echo esc_html($frase_1 ? $frase_1 : 'PILOTS');
+                ?>
+              </span>
+
+              <span class="frase-mezcla-1">
+                <?php
+                $frase_2 = get_field('frase_2', get_option('page_on_front'));
+                echo esc_html($frase_2 ? $frase_2 : 'PREVIOUSLY.');
+                ?>
+              </span>
+
+              <span class="frase-mezcla-2">
+                <?php
+                $frase_3 = get_field('frase_3', get_option('page_on_front'));
+                echo esc_html($frase_3 ? $frase_3 : 'TAKEOF');
+                ?>
+              </span>
+
+              <span class="frase-salmon">
+                <?php
+                $frase_4 = get_field('frase_4', get_option('page_on_front'));
+                echo esc_html($frase_4 ? $frase_4 : 'TODAY.');
+                ?>
+              </span>
             </p>
           </div>
         </div>
-      </div>
 
+        <?php
+        $boton_contacto = get_field('boton_contacto', get_option('page_on_front'));
+        ?>
+        <a class="tarjeta-contacto__boton" href="#">
+          <img
+            src="<?php echo esc_url($boton_contacto ? $boton_contacto['url'] : get_template_directory_uri() . '/assets/img/botton-meet.png'); ?>"
+            alt="<?php echo esc_attr($boton_contacto ? $boton_contacto['alt'] : 'Meet the team'); ?>">
+        </a>
+      </div>
     </div>
 </section>
 
