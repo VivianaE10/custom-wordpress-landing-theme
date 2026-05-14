@@ -423,7 +423,8 @@
   </div>
 </section>
 
-<!--------------------------------------------------seccion 6 -->
+<!-------------------------WITH----------------------------------------------------seccion 6 -->
+
 <section class="seccion-with">
   <div class="seccion-with__contenedor">
 
@@ -544,44 +545,70 @@
       </div>
 
     </div>
-
   </div>
 </section>
-<!-- ------------------------------------------------------------seccion 7 -->
+<!-- --------------------------VENTAS-------------------------------------------seccion 7 -->
+
 <section class="seccion-sales">
   <div class="seccion-sales__contenedor">
     <div class="seccion-sales__contenido">
-
       <h2 class="seccion-sales__titulo">
-        ELIMINATE RANDOM ACTS OF<br>
-        SALES &amp; MARKETING FOREVER
+        <?php
+         $titulo_ventas = get_field('titulo_ventas', get_option('page_on_front'));
+            echo nl2br(esc_html($titulo_ventas? $titulo_ventas:
+           "ELIMINATE RANDOM ACTS OF
+            SALES &amp; MARKETING FOREVER"
+            )
+          ); 
+        ?>   
       </h2>
 
       <p class="seccion-sales__intro">
-        This is the hill we’re willing to die on.
+          <?php
+           $intro_ventas = get_field('intro_ventas', get_option('page_on_front'));
+           echo esc_html($intro_ventas? $intro_ventas:
+           "This is the hill we’re willing to die on."
+            );
+          ?>
       </p>
 
       <div class="seccion-sales__texto">
         <p>
-          We exist to stop all the random acts of content.<br>
-          Half baked webinars an uninspired emails. One-<br>
-          off tweets and abandoned social channels.<br>
-          Leadership meetings that start with, “I just heard<br>
-          this on a podcast...”
+          <?php
+            $texto_ventas = get_field('texto_ventas', get_option('page_on_front'));
+             echo nl2br(esc_html($texto_ventas? $texto_ventas:
+              "We exist to stop all the random acts of content.
+               Half baked webinars an uninspired emails. One-
+               off tweets and abandoned social channels.
+               Leadership meetings that start with, “I just heard
+               this on a podcast...”"
+             )
+            );
+          ?>
         </p>
 
         <p>
-          You get in. RAofS&amp;M produce chaos but not<br>
-          consistent results.
-        </p>
+          <?php
+            $texto_ventas_2 = get_field('texto_ventas_2', get_option('page_on_front'));
+              echo nl2br(esc_html($texto_ventas_2? $texto_ventas_2:
+              "You get in. RAofS&M produce chaos but not
+               consistent results."
+              )
+            );
+          ?>
+       </p>
       </div>
-
+      
+      <?php
+      $boton_ventas = get_field('boton_ventas', get_option('page_on_front'));
+      ?>
+ 
       <a href="#" class="seccion-sales__boton" aria-label="Get to know us">
         <img
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-sale.png"
-          alt="Get to know us">
+          src="<?php echo esc_url($boton_ventas ? $boton_ventas['url'] : get_template_directory_uri() . '/assets/img/botton-sale.png'); ?>"
+          alt="<?php echo esc_attr($boton_ventas ? $boton_ventas['alt'] : 'Get to know us'); ?>"
+        >
       </a>
-
     </div>
   </div>
 </section>
