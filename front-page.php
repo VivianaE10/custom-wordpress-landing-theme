@@ -101,7 +101,7 @@
   </section>
 </div>
 
-<!-- ----------------------------------------------------------------------------------seccion 3  -->
+<!-- -------------------------------------TESTIMONIO---------------------------------------------seccion 3  -->
 <section class="seccion-testimonio">
   <div class="testimonio-inner">
     <?php
@@ -172,30 +172,22 @@
     </div>
 </section>
 
-<!-- ------------------------------------------------------------------------------Sección 4 -->
+<!-- --------------------------------------------CAMPANIA----------------------------------Sección 4 -->
 <section class="seccion-campania">
   <div class="seccion-campania__contenedor">
 
     <div class="seccion-campania__encabezado">
       <div class="seccion-campania__titulos">
-        <h2 class="seccion-campania__titulo titulo-blanco">  <?php
+        <h2 class="seccion-campania__titulo titulo-blanco">
+          <?php
           $titulo_blanco = get_field('titulo_blanco', get_option('page_on_front'));
-
-          echo esc_html(
-            $titulo_blanco
-            ? $titulo_blanco
-            : 'SHOW UP BOLDLY'
-          );
+          echo esc_html($titulo_blanco ? $titulo_blanco : 'SHOW UP BOLDLY');
           ?>
-</h2>
-        <h2 class="seccion-campania__titulo titulo-rosado"> <?php
+        </h2>
+        <h2 class="seccion-campania__titulo titulo-rosado">
+          <?php
           $titulo_rosado = get_field('titulo_rosado', get_option('page_on_front'));
-
-          echo esc_html(
-            $titulo_rosado
-            ? $titulo_rosado
-            : 'SHOW UP CONFIDENTLY'
-          );
+          echo esc_html($titulo_rosado ? $titulo_rosado : 'SHOW UP CONFIDENTLY');
           ?></h2>
       </div>
 
@@ -209,18 +201,17 @@
 
 
     <div class="seccion-campania__imagen-completa seccion-campania__slider">
-   <?php
+      <?php
       $campania_slide_1 = get_field('campania_slide_1', get_option('page_on_front'));
       ?>
       <div class="seccion-campania__slide activo">
-        
+
         <img
           src="<?php echo esc_url($campania_slide_1 ? $campania_slide_1['url'] : get_template_directory_uri() . '/assets/img/img-campaña.png'); ?>"
-          alt="Campaña 1"
-        >
+          alt="Campaña 1">
       </div>
 
-        <?php
+      <?php
       $campania_slide_2 = get_field('campania_slide_2', get_option('page_on_front'));
       ?>
 
@@ -228,24 +219,18 @@
         <img
           class="imagen-ajustada2"
           src="<?php echo esc_url($campania_slide_2 ? $campania_slide_2['url'] : get_template_directory_uri() . '/assets/img/campania-2.png'); ?>"
-          alt="Campaña 2"
-        >
+          alt="Campaña 2">
 
       </div>
-     <?php
+      <?php
       $campania_slide_3 = get_field('campania_slide_3', get_option('page_on_front'));
       ?>
       <div class="seccion-campania__slide">
-          <img
+        <img
           src="<?php echo esc_url($campania_slide_3 ? $campania_slide_3['url'] : get_template_directory_uri() . '/assets/img/campania-3.png'); ?>"
-          alt="Campaña 3"
-        >
+          alt="Campaña 3">
       </div>
-
-
-
     </div>
-
 
     <div class="seccion-campania__puntos">
       <span class="punto activo"></span>
@@ -256,37 +241,55 @@
 
   </div>
 </section>
-<!----------------------------------------------------------------------------- Sección 5 -->
+<!---------------------------------------SERVICIOS-------------------------------------- Sección 5 -->
 <section class="seccion-servicios">
   <div class="seccion-servicios__contenedor">
 
     <div class="seccion-servicios__hero">
+      <?php
+      $servicios_bgtext = get_field('servicios_bgtext', get_option('page_on_front'));
+      ?>
       <img
-
-        class="seccion-servicios__bgtext mover-texto-scroll "
-        src="<?php echo get_template_directory_uri(); ?>/assets/img/ency.png"
-        alt="ENCY & ADVISORY">
+        class="seccion-servicios__bgtext mover-texto-scroll"
+        src="<?php echo esc_url($servicios_bgtext ? $servicios_bgtext['url'] : get_template_directory_uri() . '/assets/img/ency.png'); ?>"
+        alt="<?php echo esc_attr($servicios_bgtext ? $servicios_bgtext['alt'] : 'ENCY & ADVISORY'); ?>">
     </div>
 
     <div class="seccion-servicios__contenido">
 
       <div class="seccion-servicios__intro">
         <h2 class="seccion-servicios__titulo">
-          <span class="titulo-blanco-servicios">B2B AGENCY</span>
-          <span class="titulo-rosado-servicios">&amp; ADVISORY</span>
+          <span class="titulo-blanco-servicios">
+            <?php
+            $titulo_blanco_servicios = get_field('titulo_blanco_servicios', get_option('page_on_front'));
+            echo esc_html($titulo_blanco_servicios ? $titulo_blanco_servicios : 'B2B AGENCY');
+            ?>
+          </span>
+          <span class="titulo-rosado-servicios">
+            <?php
+            $titulo_rosado_servicios = get_field('titulo_rosado_servicios', get_option('page_on_front'));
+            echo esc_html($titulo_rosado_servicios ? $titulo_rosado_servicios : '&amp; ADVISORY');
+            ?>
+          </span>
         </h2>
       </div>
 
       <div class="seccion-servicios__bloque">
         <div class="seccion-servicios__texto">
-          <p>
-            If a management consultancy <br>
-            and indie agency came<br>
-            together, JumpSeat would be <br>
-            the result. We’re unique blend <br>
-            of left and right brain thinking.<br>
-            Strategy and creativity. Deep <br>
-            thinking and get it done.
+          <p> 
+            <?php
+              $texto_intro_servicios = get_field('texto_intro_servicios', get_option('page_on_front'));
+               echo nl2br(esc_html( $texto_intro_servicios? $texto_intro_servicios :
+                    "If a management consultancy
+                    and indie agency came
+                    together, JumpSeat would be
+                    the result. We’re unique blend
+                    of left and right brain thinking.
+                    Strategy and creativity. Deep
+                    thinking and get it done."
+                )
+              );
+              ?>
           </p>
         </div>
 
@@ -295,10 +298,16 @@
           <article class="servicio-card servicio-card--activo">
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
-                STRATEGIC<br>
-                REVENUE<br>
-                GENERATION<br>
-                ADVISORY
+                <?php
+                  $card_1_titulo = get_field('card_1_titulo', get_option('page_on_front')); 
+                   echo nl2br(esc_html($card_1_titulo? $card_1_titulo:
+                   "STRATEGIC
+                    REVENUE
+                    GENERATION
+                    ADVISORY"
+                   )
+                  );
+               ?>           
               </h3>
 
               <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
@@ -309,15 +318,24 @@
               </button>
             </div>
             <p class="servicio-card__descripcion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <?php
+              $card_1_descripcion = get_field('card_1_descripcion', get_option('page_on_front'));
+              echo esc_html($card_1_descripcion ? $card_1_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+              ?>
             </p>
           </article>
 
           <article class="servicio-card">
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
-                BRAND<br>
-                DEVELOPMENT
+                <?php
+                  $card_2_titulo = get_field('card_2_titulo', get_option('page_on_front'));
+                   echo nl2br(esc_html($card_2_titulo ? $card_2_titulo :
+                    "BRAND
+                     DEVELOPMENT"
+                    )
+                  );
+                ?>
               </h3>
 
               <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
@@ -328,17 +346,28 @@
               </button>
             </div>
             <p class="servicio-card__descripcion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <?php
+               $card_2_descripcion = get_field('card_2_descripcion', get_option('page_on_front'));
+               echo esc_html($card_2_descripcion ? $card_2_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+              ?>
             </p>
           </article>
 
           <article class="servicio-card">
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
-                DEMAND GEN<br>
-                CAMPAIGN<br>
-                STRATEGY AND<br>
-                EXECUTION
+                <?php
+                  $card_3_titulo = get_field('card_3_titulo', get_option('page_on_front'));
+                   echo nl2br( esc_html($card_3_titulo ? $card_3_titulo :
+                    "DEMAND 
+                     GEN
+                     CAMPAIGN
+                     STRATEGY 
+                     AND
+                     EXECUTION"
+                     )
+                  );
+                ?>
               </h3>
 
               <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
@@ -349,17 +378,27 @@
               </button>
             </div>
             <p class="servicio-card__descripcion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <?php
+                $card_3_descripcion = get_field('card_3_descripcion', get_option('page_on_front'));
+                 echo esc_html($card_3_descripcion ? $card_3_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                );
+              ?>
             </p>
           </article>
 
           <article class="servicio-card">
             <div class="servicio-card__fila">
               <h3 class="servicio-card__titulo">
-                RECRUITMENT,<br>
-                ONBOARDING<br>
-                AND
-                COACHING
+                <?php
+                  $card_4_titulo = get_field('card_4_titulo', get_option('page_on_front'));
+                   echo nl2br(esc_html($card_4_titulo ? $card_4_titulo :
+                     "RECRUITMENT,<br>
+                      ONBOARDING<br>
+                      AND<br>
+                      COACHING"
+                    )
+                 );
+                ?>
               </h3>
 
               <button class="servicio-card__flecha" type="button" aria-label="Abrir servicio">
@@ -370,13 +409,16 @@
               </button>
             </div>
             <p class="servicio-card__descripcion">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <?php
+                $card_4_descripcion = get_field('card_4_descripcion', get_option('page_on_front'));
+                  echo esc_html($card_4_descripcion ? $card_4_descripcion : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                );
+              ?>
+            </p>
             </p>
           </article>
-
         </div>
       </div>
-
     </div>
   </div>
 </section>
