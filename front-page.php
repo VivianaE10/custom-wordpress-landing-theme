@@ -624,6 +624,7 @@
       src="<?php echo esc_url($imagen_fondo_inicio ? $imagen_fondo_inicio['url'] : get_template_directory_uri() . '/assets/img/start-here.png'); ?>"
       alt="<?php echo esc_attr($imagen_fondo_inicio ? $imagen_fondo_inicio['alt'] : 'Start Here'); ?>"
       class="seccion-start__bgimg mover-texto-scroll">
+    >
   </div>
   <div class="seccion-start__contenido">
     <h2 class="seccion-start__titulo">
@@ -644,27 +645,47 @@
 ----------------------------------------------------------------------------------->
 <div class="seccion-start__card">
   <div class="seccion-start__imagen">
-    <img
-      src="<?php echo get_template_directory_uri(); ?>/assets/img/img-avion.jpg"
-      alt="Airplane">
+    <?php
+      $imagen_card_inicio = get_field('imagen_card_inicio', get_option('page_on_front'));
+    ?>
+    <img src="<?php echo esc_url($imagen_card_inicio ? $imagen_card_inicio['url'] : get_template_directory_uri() . '/assets/img/img-avion.jpg'); ?>"
+      alt="<?php echo esc_attr($imagen_card_inicio ? $imagen_card_inicio['alt'] : 'Airplane'); ?>"
+    >
   </div>
   <div class="seccion-start__info">
     <h3 class="seccion-start__cardtitulo">
-      Ideal client profiles and the <br>
-      JumpSeat $5,000 FedEx rule.
+      <?php
+        $titulo_card_inicio = get_field('titulo_card_inicio', get_option('page_on_front'));
+          echo nl2br( esc_html($titulo_card_inicio? $titulo_card_inicio:
+          "Ideal client profiles and the
+          JumpSeat $5,000 FedEx rule."
+          )
+        );
+      ?>
     </h3>
 
     <p class="seccion-start__descripcion">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod<br>
-      tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-      labore et dolore magna aliqua.
+      <?php
+        $descripcion_card_inicio = get_field('descripcion_card_inicio', get_option('page_on_front'));
+         echo nl2br(esc_html($descripcion_card_inicio? $descripcion_card_inicio :
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamed do eiusmod
+          tempor incididunt consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua."
+          )
+        ); 
+      ?>
     </p>
+
+    <?php
+      $boton_card_inicio = get_field('boton_card_inicio', get_option('page_on_front'));
+    ?>
 
     <a href="#" class="seccion-start__boton">
       <img
-        src="<?php echo get_template_directory_uri(); ?>/assets/img/botton-start.png"
-        alt="Start Here">
+        src="<?php echo esc_url($boton_card_inicio ? $boton_card_inicio['url'] : get_template_directory_uri() . '/assets/img/botton-start.png'); ?>"
+        alt="<?php echo esc_attr($boton_card_inicio ? $boton_card_inicio['alt'] : 'Start Here'); ?>"
+      >
     </a>
   </div>
 </div>

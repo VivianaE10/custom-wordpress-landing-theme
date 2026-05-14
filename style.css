@@ -1007,7 +1007,7 @@ body {
 
 .seccion-start__contenido {
   position: absolute;
-  left: 18rem;
+  left: 17rem;
   top: 71%;
   transform: translateY(-50%);
   z-index: 3;
