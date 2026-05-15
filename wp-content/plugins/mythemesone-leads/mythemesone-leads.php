@@ -172,36 +172,30 @@ function mythemesone_leads_page()
                 <?php echo esc_html(wp_trim_words($lead->message, 10)); ?>
               </td>
 
-              <!-- // cambia los estados y actualiza  -->
+              <!-- // formularip para cambiar los estados y actualiza  -->
               <td>
                 <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-
                   <?php wp_nonce_field('mythemesone_update_status', 'mythemesone_status_nonce'); ?>
-
                   <input
                     type="hidden"
                     name="action"
                     value="mythemesone_update_status">
-
                   <input
                     type="hidden"
                     name="lead_id"
                     value="<?php echo esc_attr($lead->id); ?>">
 
                   <select name="status">
-
                     <option
                       value="pendiente"
                       <?php selected($lead->status, 'pendiente'); ?>>
                       Pendiente
                     </option>
-
                     <option
                       value="contactado"
                       <?php selected($lead->status, 'contactado'); ?>>
                       Contactado
                     </option>
-
                     <option
                       value="descartado"
                       <?php selected($lead->status, 'descartado'); ?>>
@@ -213,9 +207,22 @@ function mythemesone_leads_page()
                   <button type="submit" class="button button-primary">
                     Guardar
                   </button>
-
                 </form>
+                <!-- // formulario para eliminar un usuario -->
+                <form
+                  method="post"
+                  action="<?php echo esc_url(admin_url('admin-post.php')); ?>"
+                  onsubmit="return confirm('¿Seguro que quieres eliminar este contacto?');"
+                  style="margin-top: 0.5rem;">
+                  <?php wp_nonce_field('mythemesone_delete_contact', 'mythemesone_delete_nonce'); ?>
 
+                  <input type="hidden" name="action" value="mythemesone_delete_contact">
+                  <input type="hidden" name="lead_id" value="<?php echo esc_attr($lead->id); ?>">
+
+                  <button type="submit" class="button button-link-delete">
+                    Eliminar
+                  </button>
+                </form>
               </td>
 
               <td>
@@ -239,7 +246,8 @@ function mythemesone_leads_page()
   </div>
 <?php
 }
- //actualiza los estados 
+
+//actualiza los estados 
 function mythemesone_update_status()
 {
 
@@ -314,3 +322,39 @@ function mythemesone_update_status()
 
 //conecta el formulario del panel admin con la funcion php 
 add_action('admin_post_mythemesone_update_status', 'mythemesone_update_status');
+
+// funcion que elimina un usuario 
+function mythemesone_delete_contact() {
+
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( 'No autorizado.' );
+	}
+
+	if (
+		! isset( $_POST['mythemesone_delete_nonce'] ) ||
+		! wp_verify_nonce( $_POST['mythemesone_delete_nonce'], 'mythemesone_delete_contact' )
+	) {
+		wp_die( 'Solicitud no válida.' );
+	}
+
+	$lead_id = isset( $_POST['lead_id'] ) ? absint( $_POST['lead_id'] ) : 0;
+
+	if ( ! $lead_id ) {
+		wp_safe_redirect( admin_url( 'admin.php?page=mythemesone-contact-leads' ) );
+		exit;
+	}
+
+	global $wpdb;
+	$table_name = jsl_table_name();
+
+	$wpdb->delete(
+		$table_name,
+		array( 'id' => $lead_id ),
+		array( '%d' )
+	);
+
+	wp_safe_redirect( admin_url( 'admin.php?page=mythemesone-contact-leads' ) );
+	exit;
+}
+ //elimina
+add_action( 'admin_post_mythemesone_delete_contact', 'mythemesone_delete_contact' );
