@@ -1,0 +1,45 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Dependencias Composer
+vendor/
+
+# Archivos de entorno
+.env
+
+# Cache
+.cache/
+wp-content/cache/
+
+# Uploads
+wp-content/uploads/
+
+# Plugins de WordPress
+wp-content/plugins/*
+
+# Excepto plugins personalizados
+!wp-content/plugins/mythemesone-leads/
+
+# Themes
+wp-content/themes/*
+
+# Excepto tu theme
+!wp-content/themes/myThemesOne/
+
+# Archivos temporales
+*.tmp
+*.zip
+
+# VS Code
+.vscode/
+
+# Mac
+.AppleDouble
+.LSOverride
