@@ -8,7 +8,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
+//crear la tabla 
 function jsl_table_name() {
 	global $wpdb;
 	return $wpdb->prefix . 'contact_leads'; //nombre de la tabla contact_leads
@@ -81,3 +81,105 @@ function mythemesone_save_lead() {
 //hoks “cuando llegue un formulario con action=mythemesone_save_lead ejecuta esta función”.
 add_action( 'admin_post_nopriv_mythemesone_save_lead', 'mythemesone_save_lead' );
 add_action( 'admin_post_mythemesone_save_lead', 'mythemesone_save_lead' ); // usuario logeuados
+
+//Guardo el formulario 
+function mythemesone_leads_menu() {
+	add_menu_page(
+		'Contactos',
+		'Contactos',
+		'manage_options',
+		'mythemesone-contact-leads',
+		'mythemesone_leads_page',
+		'dashicons-email-alt2',
+		26
+	);
+}
+add_action( 'admin_menu', 'mythemesone_leads_menu' );
+
+// Creao la pantalla del administrador
+
+function mythemesone_leads_page() {
+
+	global $wpdb;
+	 $table_name = jsl_table_name();
+	 $leads = $wpdb->get_results(
+	 "SELECT * FROM $table_name ORDER BY created_at DESC"
+	 );
+	?>
+
+	<div class="wrap">
+		<h1>Contactos</h1>
+
+		<p>
+			Aquí puedes visualizar los registros enviados desde el formulario.
+		</p>
+
+		<table class="widefat fixed striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Cargo</th>
+					<th>Empresa</th>
+					<th>Mensaje</th>
+					<th>Estado</th>
+					<th>Fecha</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<?php if ( ! empty( $leads ) ) : ?>
+					<?php foreach ( $leads as $lead ) : ?>
+
+						<tr>
+
+							<td>
+								<?php echo esc_html( $lead->id ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( $lead->name ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( $lead->last_name ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( $lead->title ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( $lead->company ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( wp_trim_words( $lead->message, 10 ) ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( ucfirst( $lead->status ) ); ?>
+							</td>
+
+							<td>
+								<?php echo esc_html( $lead->created_at ); ?>
+							</td>
+
+						</tr>
+					<?php endforeach; ?>
+
+				<?php else : ?>
+
+					<tr>
+						<td colspan="8">
+							No hay registros todavía.
+						</td>
+					</tr>
+				<?php endif; ?>
+        
+			</tbody>
+		</table>
+	</div>
+	<?php
+}
